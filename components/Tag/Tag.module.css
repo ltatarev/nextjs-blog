@@ -1,0 +1,22 @@
+.tag {
+  background-color: transparent;
+  border: 1px solid var(--pink);
+  border-radius: 15px;
+  color: var(--pink);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  width: fit-content;
+}
+
+.tag:hover {
+  background-color: var(--pink);
+  border: 1px solid var(--white);
+  color: var(--white);
+  transition: all 0.15s ease-in-out;
+}
