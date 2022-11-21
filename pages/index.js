@@ -11,6 +11,7 @@ import {
   MorePosts,
   RightArrow,
 } from '../components';
+import { MyNavbar } from '../components/Navbar';
 import { getAllPosts } from '../lib/api';
 
 export default function Home({ allPosts }) {
@@ -23,6 +24,7 @@ export default function Home({ allPosts }) {
         <title>{meta.title}</title>
       </Head>
       <Container>
+        <MyNavbar />
         <Intro />
         {heroPost && <HeroPost post={heroPost} />}
         {morePosts.length > 0 && <MorePosts posts={morePosts} />}
