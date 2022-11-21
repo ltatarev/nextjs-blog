@@ -8,6 +8,7 @@ export const TagShape = PropTypes.oneOf(Object.values(TAGS));
 export function Tag({ title }) {
   return (
     <Button
+      auto
       className="
         rounded-3xl
         border-accent-1

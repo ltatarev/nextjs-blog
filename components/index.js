@@ -4,3 +4,4 @@ export * from './Header';
 export * from './Intro';
 export * from './Layout';
 export * from './Post';
+export * from './Text';
