@@ -1,6 +1,7 @@
 {
   "extends": [
     "@menelaia/react",
+    "plugin:@next/next/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "plugins": ["tailwindcss"],

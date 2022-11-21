@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import Footer from "./footer";
-import Meta from "./Meta";
+import PropTypes from 'prop-types';
+import { Footer } from './Footer';
+import { Meta } from './Meta';
 
 export function Layout({ children }) {
   return (

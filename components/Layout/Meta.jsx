@@ -1,8 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head';
 
 // https://realfavicongenerator.net/
 
-export default function Meta() {
+export function Meta() {
   return (
     <Head>
       <link

@@ -1,1 +1,1 @@
-export { Tag, TAGS, TagShape } from "./Tag";
+export { Tag, TAGS, TagShape } from './Tag';
