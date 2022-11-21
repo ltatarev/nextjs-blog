@@ -1,12 +1,12 @@
 ---
-title: 'Hello world'
+title: 'Hello everyone copy'
 subtitle: 'Tessa Sharpe'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/Cover.png'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.  leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/GST.png'
 date: '16.5.2022.'
-id: 1
+id: 4
 ogImage:
-  url: '/assets/blog/Cover.png'
+  url: '/assets/blog/GST.png'
 tag: 'Recenzija'
 ---
 

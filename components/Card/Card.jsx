@@ -36,20 +36,24 @@ export function Card(props) {
   return (
     <div
       className="
-        max-w-full
+        h-full
+        content-center
         rounded-xl
         bg-slate-50
         p-5
         shadow-xl
         transition-all
-        duration-150
-        hover:-translate-y-1
+        duration-200
+        ease-in
+        hover:-translate-y-0.5
         hover:shadow-2xl
-        hover:duration-150"
+        hover:duration-200"
     >
-      <div className="grid grid-cols-8 gap-4">
-        <div className="col-span-8 md:col-span-3">
-          <Image height={630} src={coverImage} width={1300} />
+      <div className="grid h-full grid-cols-8 gap-4">
+        <div className="col-span-8 sm:col-span-3">
+          <div className="relative h-full w-full min-w-fit">
+            <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
+          </div>
         </div>
         <div className="col-span-8 flex flex-col md:col-span-5">
           <div className="m-2 mb-5 flex-1">
@@ -59,7 +63,7 @@ export function Card(props) {
           </div>
           <div className="m-2 grid grid-cols-2">
             <span className="justify-self-start">
-              <Tag title={tag} />
+              <Tag outline title={tag} />
             </span>
             <span className="justify-self-end">
               <Text className="pt-2 text-sm opacity-80">Objavljeno: {date}</Text>

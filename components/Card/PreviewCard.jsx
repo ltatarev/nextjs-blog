@@ -14,15 +14,15 @@ export function PreviewCard({
   date,
 }) {
   return (
-    <Card isHoverable isPressable className="max-w-md">
-      <Card.Header css={{ position: 'absolute', zIndex: 1, bottom: 5 }}>
-        <Text size={12} transform="uppercase" weight="bold">
+    <Card isHoverable isPressable className="h-full border-0 bg-transparent">
+      <Card.Header className="fixed inset-x-3 bottom-14">
+        <Text className="text-3xl font-bold text-slate-50">
           {title}
         </Text>
       </Card.Header>
-      <Card.Body css={{ p: 0 }}>
+      <Card.Body className="p-0">
         <Card.Image
-          alt="Relaxing app background"
+          alt={title}
           height="100%"
           objectFit="cover"
           src={coverImage}
@@ -30,28 +30,16 @@ export function PreviewCard({
         />
       </Card.Body>
       <Card.Footer
-        css={{
-          position: 'absolute',
-          bottom: 0,
-          zIndex: 1,
-        }}
+        className="fixed inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#2a2b2b] to-transparent"
       >
-        <Row>
-          <Col>
+        <Row className="fixed bottom-3 p-3">
+          <Col className="w-auto">
             <Tag title={tag} />
           </Col>
-          <Col>
-            <Row align="center" justify="flex-end">
-
-              <Text
-                color="white"
-                size={18}
-                transform="uppercase"
-                weight="bold"
-              >
-                {date}
-              </Text>
-            </Row>
+          <Col className="mr-5 text-end">
+            <Text className="text-lg font-bold uppercase text-slate-50">
+              {date}
+            </Text>
           </Col>
         </Row>
       </Card.Footer>

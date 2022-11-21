@@ -1,12 +1,13 @@
 ---
-title: "Learn How to Pre-render Pages Using Static Generation with Next.js"
-subtitle: "Tessa Sharpe"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/Cover.png"
-date: "16.5.2022."
+title: 'This is my new post'
+subtitle: 'Tessa Sharpe'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/KOS.png'
+date: '16.5.2022.'
+id: 2
 ogImage:
-  url: "/assets/blog/Cover.png"
-tag: "Recenzija"
+  url: '/assets/blog/KOS.png'
+tag: 'Recenzija'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
