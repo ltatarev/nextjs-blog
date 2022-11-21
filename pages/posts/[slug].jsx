@@ -1,3 +1,4 @@
+import { Loading } from '@nextui-org/react';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -20,23 +21,21 @@ export default function Post({ post }) {
       <Container>
         <Header />
         {router.isFallback ? (
-          <h1>Loading…</h1>
+          <Loading />
         ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{post.title}</title>
-                <meta content={post.ogImage.url} property="og:image" />
-              </Head>
-              <PostHeader
-                author={post.author}
-                coverImage={post.coverImage}
-                date={post.date}
-                title={post.title}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
+          <article className="mb-32">
+            <Head>
+              <title>{post.title}</title>
+              <meta content={post.ogImage.url} property="og:image" />
+            </Head>
+            <PostHeader
+              author={post.author}
+              coverImage={post.coverImage}
+              date={post.date}
+              title={post.title}
+            />
+            <PostBody content={post.content} />
+          </article>
         )}
       </Container>
     </Layout>

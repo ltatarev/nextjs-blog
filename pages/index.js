@@ -13,32 +13,30 @@ export default function Home({ allPosts }) {
   // const morePosts = allPosts.slice(1);
 
   return (
-    <>
-      <Layout>
-        <Head>
-          <title>{meta.title}</title>
-        </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <>
-              <h4 className="my-5 text-3xl font-bold text-slate-800">
-                🌟 Nova objava
-              </h4>
-              <Card
-                coverImage={heroPost.coverImage}
-                date={heroPost.date}
-                excerpt={heroPost.excerpt}
-                slug={heroPost.slug}
-                subtitle={heroPost.subtitle}
-                tag={heroPost.tag}
-                title={heroPost.title}
-              />
-            </>
-          )}
-        </Container>
-      </Layout>
-    </>
+    <Layout>
+      <Head>
+        <title>{meta.title}</title>
+      </Head>
+      <Container>
+        <Intro />
+        {heroPost && (
+        <>
+          <h4 className="my-5 text-3xl font-bold text-slate-800">
+            🌟 Nova objava
+          </h4>
+          <Card
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            excerpt={heroPost.excerpt}
+            slug={heroPost.slug}
+            subtitle={heroPost.subtitle}
+            tag={heroPost.tag}
+            title={heroPost.title}
+          />
+        </>
+        )}
+      </Container>
+    </Layout>
   );
 }
 

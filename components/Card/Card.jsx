@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Text } from '@nextui-org/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
@@ -51,7 +52,7 @@ export function Card({
                 <Tag title={tag} />
               </span>
               <span className="justify-self-end">
-                <p className="pt-2 text-sm opacity-80">Objavljeno: {date}</p>
+                <Text className="pt-2 text-sm opacity-80">Objavljeno: {date}</Text>
               </span>
             </div>
           </div>

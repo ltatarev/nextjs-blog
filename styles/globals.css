@@ -1,4 +1,20 @@
 @tailwind base;
+
+/* Override default style for nextui
+- https://tailwindcss.com/docs/preflight#overview
+- https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css
+*/
+@layer base {
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    appearance: button; /* 1 */
+    background-color: #ca718d; /* 2 */
+    background-image: none; /* 2 */
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
