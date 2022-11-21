@@ -1,7 +1,12 @@
 {
-  "extends": "@menelaia/react",
+  "extends": [
+    "@menelaia/react",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss"],
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "global-require": "off",
     "max-len": ["error", { "code": 100, "tabWidth": 4 }]
   }
 }

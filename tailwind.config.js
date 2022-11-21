@@ -11,6 +11,12 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-dmSans)', ...fontFamily.sans],
       },
+      colors: {
+        'accent-1': '#FAFAFA',
+        'accent-2': '#EAEAEA',
+        pink: '#ca718d',
+        success: '#0070f3',
+      },
     },
   },
   plugins: [],
