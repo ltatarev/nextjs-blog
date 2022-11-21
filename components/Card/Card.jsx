@@ -47,7 +47,7 @@ export function Card(props) {
         ease-in
         hover:-translate-y-0.5
         hover:shadow-2xl
-        hover:duration-200"
+        hover:duration-100"
     >
       <div className="grid h-full grid-cols-8 gap-4">
         <div className="col-span-8 sm:col-span-3">

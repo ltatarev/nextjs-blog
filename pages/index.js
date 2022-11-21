@@ -9,9 +9,9 @@ import {
   Intro,
   Layout,
   MorePosts,
+  Nav,
   RightArrow,
 } from '../components';
-import { MyNavbar } from '../components/Navbar';
 import { getAllPosts } from '../lib/api';
 
 export default function Home({ allPosts }) {
@@ -24,7 +24,7 @@ export default function Home({ allPosts }) {
         <title>{meta.title}</title>
       </Head>
       <Container>
-        <MyNavbar />
+        <Nav />
         <Intro />
         {heroPost && <HeroPost post={heroPost} />}
         {morePosts.length > 0 && <MorePosts posts={morePosts} />}
@@ -34,7 +34,7 @@ export default function Home({ allPosts }) {
             bordered
             ghost
             shadow
-            className="self-end hover:bg-purple-500"
+            className="group self-end hover:bg-purple-800"
             color="secondary"
             iconRight={<RightArrow />}
           >
