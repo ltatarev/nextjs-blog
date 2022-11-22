@@ -28,12 +28,16 @@ const ROUTES = [
 
 export function Nav() {
   return (
-    <Navbar className="mt-14 bg-white shadow-none" variant="static">
+    <Navbar
+      disableBlur
+      className="pt-14 shadow-none"
+      containerCss={{ backgroundColor: 'rgb(245 245 245)' }}
+    >
       <Navbar.Brand>
-        <Navbar.Toggle aria-label="toggle navigation" className="mx-5" showIn="xs" />
+        <Navbar.Toggle aria-label="toggle navigation" className="px-5" showIn="xs" />
         <Link href="/"><Image height={100} src="/assets/logo.png" width={100} /></Link>
       </Navbar.Brand>
-      <Navbar.Content className="w-2/3 justify-center" hideIn="xs" variant="highlight-rounded">
+      <Navbar.Content className="w-2/3 justify-center  " hideIn="xs" variant="highlight-rounded">
         {ROUTES.map((item) => <NavLink key={item.route} link={item} />)}
         <NavButtons />
       </Navbar.Content>

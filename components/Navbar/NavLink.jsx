@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 const BASE_CLASSES = `mx-3 p-3 min-w-max 
   rounded-2xl 
   border
-  border-white
+  border-neutral-100
   hover:border-purple-500/0
   hover:bg-purple-500/20 
   hover:transition-all`;
 
 const ACTIVE_CLASSES = `bg-purple-500/0 
-  border-purple-500 
+  border-purple-300 
   shadow-button 
   shadow-purple-500 
   hover:bg-purple-500/40 h

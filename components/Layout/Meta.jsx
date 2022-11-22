@@ -1,10 +1,9 @@
-import Head from 'next/head';
 
 // https://realfavicongenerator.net/
 
 export function Meta() {
   return (
-    <Head>
+    <>
       <link
         href="/favicon/apple-touch-icon.png"
         rel="apple-touch-icon"
@@ -34,6 +33,6 @@ export function Meta() {
       <meta content="#ffffff" name="theme-color" />
       <link href="/feed.xml" rel="alternate" type="application/rss+xml" />
       <meta content="/assets/hero.png" property="og:image" />
-    </Head>
+    </>
   );
 }

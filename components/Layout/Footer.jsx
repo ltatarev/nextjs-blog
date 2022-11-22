@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
       <Container>
-        <div className="flex flex-col items-center  py-10 lg:flex-row">
+        <div className="flex flex-col items-center py-10 lg:flex-row">
           <h3 className="
             mb-10
             text-center
