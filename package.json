@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@menelaia/eslint-config-react": "2.0.0",
-    "@next/eslint-plugin-next": "13.0.4",
+    "@next/eslint-plugin-next": "^13.0.4",
     "autoprefixer": "10.4.13",
     "eslint": "8.28.0",
     "eslint-plugin-import": "2.26.0",

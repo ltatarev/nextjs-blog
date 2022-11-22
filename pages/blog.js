@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import { meta } from '../common/meta';
 import {
   Container,
@@ -9,7 +8,7 @@ import {
 } from '../components';
 import { getAllPosts } from '../lib/api';
 
-export default function Blog({ allPosts }) {
+export default function Blog() {
   return (
     <Layout>
       <Head>
@@ -23,8 +22,6 @@ export default function Blog({ allPosts }) {
     </Layout>
   );
 }
-
-Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([

@@ -9,7 +9,6 @@ export function NavLink({ link }) {
   const router = useRouter();
 
   const isActive = link.route.replace('/', '') === router.route.replace('/', '');
-  console.log(isActive, link.route);
 
   const classNames = cn(
     `mx-3 p-3 min-w-max 
