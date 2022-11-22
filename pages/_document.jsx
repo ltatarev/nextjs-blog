@@ -1,7 +1,11 @@
 import { CssBaseline } from '@nextui-org/react';
 import Document, {
-  Head, Html, Main, NextScript,
+  Head,
+  Html,
+  Main,
+  NextScript,
 } from 'next/document';
+import { Meta } from '../components/Layout/Meta';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -16,8 +20,11 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>{CssBaseline.flush()}</Head>
-        <body>
+        <Head>
+          {CssBaseline.flush()}
+          <Meta />
+        </Head>
+        <body className="bg-neutral-100">
           <Main />
           <NextScript />
         </body>

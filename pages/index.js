@@ -1,17 +1,14 @@
-import Head from 'next/head';
 import PropTypes from 'prop-types';
-import { meta } from '../common/meta';
 import { mapMorePosts } from '../common/postUtils';
 import {
   Container,
   FeaturedSection,
-  Footer,
   HeroPost,
   Intro,
+  Layout,
   MorePosts,
   Nav,
 } from '../components';
-import { Meta } from '../components/Layout/Meta';
 import { getAllPosts } from '../lib/api';
 
 export default function Home({ allPosts }) {
@@ -19,11 +16,7 @@ export default function Home({ allPosts }) {
   const morePosts = mapMorePosts(allPosts.slice(1, 5));
 
   return (
-    <>
-      <Head>
-        <Meta />
-        <title>{meta.title}</title>
-      </Head>
+    <Layout>
       <Container>
         <Nav />
         <Intro />
@@ -31,8 +24,7 @@ export default function Home({ allPosts }) {
         {morePosts.length > 0 && <MorePosts posts={morePosts} />}
         <FeaturedSection />
       </Container>
-      <Footer />
-    </>
+    </Layout>
   );
 }
 

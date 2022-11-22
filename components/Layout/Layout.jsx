@@ -1,16 +1,14 @@
 import PropTypes from 'prop-types';
 import { Footer } from './Footer';
-import { Meta } from './Meta';
 
 export function Layout({ children }) {
   return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <main>{children}</main>
+    <div className="h-full">
+      <div>
+        {children}
+        <Footer />
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
 

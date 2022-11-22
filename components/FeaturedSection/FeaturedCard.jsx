@@ -5,8 +5,9 @@ export const CARD_TYPES = ['BOOK', 'CURRENT_READ', 'TV', 'GAME'];
 
 export function FeaturedCard() {
   return (
-    <div className="flex
-      w-1/5
+    <div
+      className="flex
+      w-auto
       flex-col
       items-center
       rounded-2xl
@@ -29,10 +30,14 @@ export function FeaturedCard() {
       >
         Svibanj
       </p>
-      <Image className="rounded-xl object-cover" height={100} src="/assets/featured/BookMonth.jpg" width={100} />
-      <Image className="rounded-xl object-cover" height={100} src="/assets/featured/BookMonth.jpg" width={100} />
-      <Image className="rounded-xl object-cover" height={100} src="/assets/featured/BookMonth.jpg" width={100} />
+      <Image
+        className="rounded-xl object-cover"
+        height={100}
+        src="/assets/featured/BookMonth.jpg"
+        width={100}
+      />
     </div>
+
   );
 }
 
