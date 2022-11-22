@@ -50,8 +50,8 @@ export function Card(props) {
         hover:duration-100"
     >
       <div className="grid h-full grid-cols-8 gap-4">
-        <div className="col-span-8 sm:col-span-3">
-          <div className="relative h-72">
+        <div className="col-span-8 md:col-span-3">
+          <div className="relative h-72 w-full md:h-full">
             <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
           </div>
         </div>

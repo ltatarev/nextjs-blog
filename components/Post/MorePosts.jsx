@@ -41,7 +41,7 @@ export function MorePosts({
   posts,
 }) {
   return (
-    <div className="my-20">
+    <div className="mt-20 mb-10">
       <SectionTitle>📚 Ostale objave</SectionTitle>
       <div className="row-auto grid auto-rows-max grid-cols-3 gap-7">
         {posts.map((postDuo, index) => (

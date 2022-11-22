@@ -22,4 +22,5 @@ body {
   scroll-behavior: smooth;
   -webkit-touch-callout: none; /* iOS Safari */
   user-select: none;
+  min-width: 400px;
 }

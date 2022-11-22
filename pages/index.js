@@ -29,7 +29,7 @@ export default function Home({ allPosts }) {
         <Intro />
         {heroPost && <HeroPost post={heroPost} />}
         {morePosts.length > 0 && <MorePosts posts={morePosts} />}
-        <Row className="my-10 flex place-content-end">
+        <Row className="mb-10 flex place-content-end">
           <Link href="/blog">
             <Button
               auto
