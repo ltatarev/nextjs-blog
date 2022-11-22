@@ -15,6 +15,9 @@ module.exports = {
         'accent-1': '#ca718d',
         success: '#0070f3',
       },
+      boxShadow: {
+        button: '0 4px 14px 0px',
+      },
     },
   },
   plugins: [],

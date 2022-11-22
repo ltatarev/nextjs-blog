@@ -1,10 +1,10 @@
 import React from 'react';
 import {
+  Image,
   Navbar,
 } from '@nextui-org/react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Mail } from '../Icons';
+import { NavButtons } from './NavButtons';
 import { NavLink } from './NavLink';
 
 const ROUTES = [
@@ -30,15 +30,12 @@ export function Nav() {
   return (
     <Navbar className="mt-14 bg-white shadow-none" variant="static">
       <Navbar.Brand>
-        <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
+        <Navbar.Toggle aria-label="toggle navigation" className="mx-5" showIn="xs" />
         <Image height={100} src="/assets/logo.png" width={100} />
       </Navbar.Brand>
-      <Navbar.Content className="flex w-2/3 justify-center" hideIn="xs" variant="highlight-rounded">
+      <Navbar.Content className="w-2/3 justify-center" hideIn="xs" variant="highlight-rounded">
         {ROUTES.map((item) => <NavLink key={item.route} link={item} />)}
-        <div className="flex w-1/2 justify-end">
-          <Link className="mx-5" href="#"><Instagram /></Link>
-          <Link className="mx-5" href="#"><Mail /></Link>
-        </div>
+        <NavButtons />
       </Navbar.Content>
       <Navbar.Collapse>
         {ROUTES.map((item) => (

@@ -1,5 +1,6 @@
 import { Button, Row } from '@nextui-org/react';
 import Head from 'next/head';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { meta } from '../common/meta';
 import { mapMorePosts } from '../common/postUtils';
@@ -29,17 +30,19 @@ export default function Home({ allPosts }) {
         {heroPost && <HeroPost post={heroPost} />}
         {morePosts.length > 0 && <MorePosts posts={morePosts} />}
         <Row className="my-10 flex place-content-end">
-          <Button
-            auto
-            bordered
-            ghost
-            shadow
-            className="group self-end hover:bg-purple-800"
-            color="secondary"
-            iconRight={<RightArrow />}
-          >
-            Pročitaj više na blogu
-          </Button>
+          <Link href="/blog">
+            <Button
+              auto
+              bordered
+              ghost
+              shadow
+              className="group self-end hover:bg-purple-800"
+              color="secondary"
+              iconRight={<RightArrow />}
+            >
+              Pročitaj više na blogu
+            </Button>
+          </Link>
         </Row>
       </Container>
     </Layout>
