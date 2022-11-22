@@ -4,8 +4,8 @@ import { Card } from '../Card';
 import { SectionTitle } from '../Text';
 
 const STYLES = {
-  LARGE_POST: { div: 'col-span-2', card: 'large' },
-  PREVIEW_POST: { div: 'col-auto', card: 'preview' },
+  LARGE_POST: { div: 'col-span-full sm:col-span-2', card: 'large' },
+  PREVIEW_POST: { div: 'col-span-full sm:col-auto', card: 'preview' },
 };
 
 function PostRow({ posts, index }) {
@@ -43,7 +43,7 @@ export function MorePosts({
   return (
     <div className="my-20">
       <SectionTitle>📚 Ostale objave</SectionTitle>
-      <div className="grid grid-cols-3 gap-7">
+      <div className="row-auto grid auto-rows-max grid-cols-3 gap-7">
         {posts.map((postDuo, index) => (
           <PostRow key={postDuo[0].slug} index={index} posts={postDuo} />
         ))}

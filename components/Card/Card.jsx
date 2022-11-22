@@ -51,7 +51,7 @@ export function Card(props) {
     >
       <div className="grid h-full grid-cols-8 gap-4">
         <div className="col-span-8 sm:col-span-3">
-          <div className="relative h-full w-full min-w-fit">
+          <div className="relative h-72">
             <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
           </div>
         </div>
