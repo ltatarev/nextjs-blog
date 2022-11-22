@@ -7,12 +7,12 @@ export function CoverImage({ title, src, slug }) {
   const image = (
     <Image
       alt={`Cover Image for ${title}`}
-      className={cn('shadow-sm w-10/12', {
+      className={cn('w-4/12', {
         'hover:shadow-lg transition-shadow duration-200': slug,
       })}
-      height={600}
+      height={300}
       src={src}
-      width={800}
+      width={300}
     />
   );
 

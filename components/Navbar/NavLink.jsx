@@ -5,22 +5,29 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
+const BASE_CLASSES = `mx-3 p-3 min-w-max 
+  rounded-2xl 
+  border
+  border-white
+  hover:border-purple-500/0
+  hover:bg-purple-500/20 
+  hover:transition-all`;
+
+const ACTIVE_CLASSES = `bg-purple-500/0 
+  border-purple-500 
+  shadow-button 
+  shadow-purple-500 
+  hover:bg-purple-500/40 h
+  over:border-purple-500`;
+
 export function NavLink({ link }) {
   const router = useRouter();
 
   const isActive = link.route.replace('/', '') === router.route.replace('/', '');
 
   const classNames = cn(
-    `mx-3 p-3 min-w-max 
-    rounded-2xl 
-    border-2 
-    border-white 
-    hover:border-blue-500 
-    hover:bg-blue-500/20 
-    hover:transition-all 
-    hover:shadow-button 
-    hover:shadow-blue-500`,
-    { 'bg-blue-500/40 border-2 border-blue-500 hover:bg-blue-500/40': isActive },
+    BASE_CLASSES,
+    { [ACTIVE_CLASSES]: isActive },
   );
 
   return (

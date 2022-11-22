@@ -31,7 +31,7 @@ export function Nav() {
     <Navbar className="mt-14 bg-white shadow-none" variant="static">
       <Navbar.Brand>
         <Navbar.Toggle aria-label="toggle navigation" className="mx-5" showIn="xs" />
-        <Image height={100} src="/assets/logo.png" width={100} />
+        <Link href="/"><Image height={100} src="/assets/logo.png" width={100} /></Link>
       </Navbar.Brand>
       <Navbar.Content className="w-2/3 justify-center" hideIn="xs" variant="highlight-rounded">
         {ROUTES.map((item) => <NavLink key={item.route} link={item} />)}
