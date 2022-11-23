@@ -63,7 +63,7 @@ export function FeaturedCard({
         )}
         <div className={imageContainerClasses}>
           <Image
-            className="rounded-2xl object-cover my-2"
+            className="my-2 rounded-2xl object-cover"
             height={imageHeight}
             src={imgSrc}
             width={imageWidth}
