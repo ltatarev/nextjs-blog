@@ -29,7 +29,7 @@ export function Meta() {
       <link href="/favicon/favicon.ico" rel="shortcut icon" />
       <meta content="#da532c" name="msapplication-TileColor" />
       <meta content="/favicon/browserconfig.xml" name="msapplication-config" />
-      <meta content="#ffffff" name="theme-color" />
+      <meta content="#ca718d" name="theme-color" />
       <link href="/feed.xml" rel="alternate" type="application/rss+xml" />
       <meta content="/assets/hero.png" property="og:image" />
     </>
