@@ -4,12 +4,12 @@ import { FeaturedCard } from './FeaturedCard';
 
 export function FeaturedSection() {
   return (
-    <div className="-mb-20 flex w-full flex-row justify-center">
+    <div className="flex w-full flex-row flex-wrap justify-center">
       <FeaturedCard
         AccentImage={(
           <Image
             className="relative
-            -top-56
+            -top-40
             -left-28
             hover:-translate-y-0.5
             hover:duration-100"
@@ -27,7 +27,7 @@ export function FeaturedSection() {
         AccentImage={(
           <Image
             className="relative
-            -top-32
+            -top-10
             -right-32
             hover:-translate-y-0.5
             hover:duration-100"
@@ -43,8 +43,8 @@ export function FeaturedSection() {
         AccentImage={(
           <Image
             className="relative
-            -top-36
-            -right-32
+            -top-5
+            -right-24
             hover:-translate-y-0.5
             hover:duration-100"
             height={200}

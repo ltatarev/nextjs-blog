@@ -9,27 +9,28 @@ export function FeaturedCard({
   title, label, imgSrc, AccentImage, main,
 }) {
   const containerClasses = cn(
-    `mx-20
-    flex
-    w-1/5
+    `flex
+    mt-10   
+    xl:w-1/3
     flex-col
     items-center`,
-    { 'w-1/3': main },
+    { 'xl:w-1/3': main },
   );
 
   const innerContentClasses = cn(
     `flex
     flex-col
-    w-full
+    text-center
     items-center
     rounded-2xl
     bg-white
     p-8
+    -mb-32
     shadow-lg
     hover:-translate-y-0.5
     hover:shadow-xl
     hover:duration-100`,
-    { 'h-[25rem] w-4/6 -my-6': main },
+    { 'w-1/2': main },
   );
 
   const imageContainerClasses = cn(
@@ -38,7 +39,7 @@ export function FeaturedCard({
   );
 
   const imageWidth = main ? 320 : 150;
-  const imageHeight = main ? 300 : 100;
+  const imageHeight = main ? 200 : 100;
 
   return (
     <div className={containerClasses}>
