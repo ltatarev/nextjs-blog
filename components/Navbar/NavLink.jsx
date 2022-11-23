@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 export function NavLink({ link }) {
   const router = useRouter();
- 
+
   const isActive = link.route.replace('/', '') === router.route.replace('/', '');
 
   const BASE_CLASSES = `mx-3 my-5 p-3 min-w-max 
