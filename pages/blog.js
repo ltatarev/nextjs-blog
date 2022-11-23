@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import { meta } from '../common/meta';
 import {
   Container,
   Intro,
@@ -11,13 +9,9 @@ import { getAllPosts } from '../lib/api';
 export default function Blog() {
   return (
     <Layout>
-      <Head>
-        <title>{meta.title}</title>
-      </Head>
       <Container>
         <Nav />
         <Intro />
-
       </Container>
     </Layout>
   );

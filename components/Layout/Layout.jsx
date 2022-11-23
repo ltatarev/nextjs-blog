@@ -3,11 +3,11 @@ import { Footer } from './Footer';
 
 export function Layout({ children }) {
   return (
-    <div className="h-full">
-      <div>
+    <div>
+      <div className="h-full min-h-screen">
         {children}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
