@@ -9,22 +9,54 @@ const ROUTES = [
   {
     route: '/',
     title: 'Početna',
-    color: 'purple',
+    classes: {
+      BASE: 'hover:border-purple-500/0 hover:bg-purple-500/20',
+      ACTIVE: `bg-purple-500/0 
+      border-purple-300 
+      shadow-button 
+      shadow-purple-500 
+      hover:bg-purple-500/40 
+      hover:border-purple-500`,
+    },
   },
   {
     route: '/blog',
     title: 'Blog',
-    color: 'blue',
+    classes: {
+      BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
+      ACTIVE: `bg-blue-500/0 
+      border-blue-300 
+      shadow-button 
+      shadow-blue-500 
+      hover:bg-blue-500/40 
+      hover:border-blue-500`,
+    },
   },
   {
     route: '/about',
     title: 'O meni',
-    color: 'rose',
+    classes: {
+      BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
+      ACTIVE: `bg-rose-500/0 
+      border-rose-300 
+      shadow-button 
+      shadow-rose-500 
+      hover:bg-rose-500/40 
+      hover:border-rose-500`,
+    },
   },
   {
     route: '/contact',
     title: 'Kontakt',
-    color: 'blue',
+    classes: {
+      BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
+      ACTIVE: `bg-green-500/0 
+      border-green-300 
+      shadow-button 
+      shadow-green-500 
+      hover:bg-green-500/40 
+      hover:border-green-500`,
+    },
   },
 ];
 

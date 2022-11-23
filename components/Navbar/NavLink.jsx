@@ -10,24 +10,18 @@ export function NavLink({ link }) {
 
   const isActive = link.route.replace('/', '') === router.route.replace('/', '');
 
-  const BASE_CLASSES = `mx-3 my-5 p-3 min-w-max 
+  const BASE_CLASSES = `mx-3 
+    my-5 p-3 
+    min-w-max 
     rounded-2xl 
     border
     border-transparent
-    hover:border-${link.color}-500/0
-    hover:bg-${link.color}-500/20 
     hover:transition-all`;
-
-  const ACTIVE_CLASSES = `bg-${link.color}-500/0 
-    border-${link.color}-300 
-    shadow-button 
-    shadow-${link.color}-500 
-    hover:bg-${link.color}-500/40 
-    hover:border-${link.color}-500`;
 
   const classNames = cn(
     BASE_CLASSES,
-    { [ACTIVE_CLASSES]: isActive },
+    link.classes.BASE,
+    { [link.classes.ACTIVE]: isActive },
   );
 
   return (
