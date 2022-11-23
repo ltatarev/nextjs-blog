@@ -1,11 +1,7 @@
 /* eslint-disable max-len */
-import PropTypes from 'prop-types';
 
 export function RightArrow({
-  fill,
-  size,
-  height,
-  width,
+
   ...props
 }) {
   return (
@@ -23,10 +19,3 @@ export function RightArrow({
     </svg>
   );
 }
-
-RightArrow.propTypes = {
-  fill: PropTypes.string.isRequired,
-  height: PropTypes.number.isRequired,
-  size: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-};
