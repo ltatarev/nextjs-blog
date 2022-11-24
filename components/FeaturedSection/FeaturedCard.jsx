@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export const CARD_TYPES = ['BOOK', 'CURRENT_READ', 'TV', 'GAME'];
 
 export function FeaturedCard({
-  title, label, imgSrc, AccentImage, main,
+  title, label, imgSrc, AccentImage,
 }) {
   const containerClasses = cn(
     `flex
@@ -69,10 +69,8 @@ FeaturedCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   label: PropTypes.string,
-  main: PropTypes.bool,
 };
 
 FeaturedCard.defaultProps = {
   label: null,
-  main: false,
 };
