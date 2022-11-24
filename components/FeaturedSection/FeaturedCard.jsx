@@ -10,47 +10,40 @@ export function FeaturedCard({
 }) {
   const containerClasses = cn(
     `flex
-    mt-10   
-    xl:w-1/3
+    my-10   
+    xl:w-1/4
     flex-col
+    h-[22rem]
+    mb-20
+    xl:mb-52
     items-center`,
-    { 'xl:w-1/3': main },
   );
 
   const innerContentClasses = cn(
     `flex
     flex-col
+    h-full 
     text-center
     items-center
     rounded-2xl
-    bg-white
+    bg-white 
     p-8
-    -mb-32
+    mx-8
     shadow-lg
     hover:-translate-y-0.5
     hover:shadow-xl
     hover:duration-100`,
-    { 'w-1/2': main },
   );
 
-  const imageContainerClasses = cn(
-    'relative h-60 w-full flex justify-center px-2',
-    { 'h-5/6 mt-5': main },
-  );
-
-  const imageWidth = main ? 320 : 150;
-  const imageHeight = main ? 200 : 100;
+  const imageContainerClasses = cn('relative w-full flex justify-center px-2');
 
   return (
     <div className={containerClasses}>
-      <div
-        className={innerContentClasses}
-      >
+      <div className={innerContentClasses}>
         <p className="text-xl font-bold">{title}</p>
         {!!label && (
-        <p className="my-3
-            w-min
-            rounded-xl
+          <p
+            className="rounded-xl
             bg-purple-200
             px-5
             py-1
@@ -58,22 +51,16 @@ export function FeaturedCard({
             font-bold
             uppercase
             leading-relaxed"
-        >
-          {label}
-        </p>
+          >
+            {label}
+          </p>
         )}
         <div className={imageContainerClasses}>
-          <Image
-            className="my-2 rounded-2xl object-cover"
-            height={imageHeight}
-            src={imgSrc}
-            width={imageWidth}
-          />
+          <Image className="my-2 rounded-2xl object-cover" height={100} src={imgSrc} width={150} />
         </div>
       </div>
       {AccentImage}
     </div>
-
   );
 }
 
