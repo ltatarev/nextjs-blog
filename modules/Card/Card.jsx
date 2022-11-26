@@ -1,8 +1,7 @@
 import { useMemo } from 'react';
-import { Text } from '@nextui-org/react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { Tag, TagShape } from '../Tag';
+import { Tag } from '../Tag';
 import { PreviewCard } from './PreviewCard';
 
 const SUMMARY_LENGTH = 800;
@@ -14,17 +13,13 @@ export const CARD_VARIANTS = {
 
 export function Card(props) {
   const {
-    title,
-    subtitle,
-    excerpt,
-    coverImage,
-    tag,
-    date,
-    variant,
+    title, subtitle, excerpt, coverImage, tag, date, variant,
   } = props;
 
   const summary = useMemo(() => {
-    if (excerpt.length > SUMMARY_LENGTH) { return `${excerpt.substring(0, SUMMARY_LENGTH)}...`; }
+    if (excerpt.length > SUMMARY_LENGTH) {
+      return `${excerpt.substring(0, SUMMARY_LENGTH)}...`;
+    }
 
     return excerpt;
   }, [excerpt]);
@@ -66,7 +61,7 @@ export function Card(props) {
               <Tag outline title={tag} />
             </span>
             <span className="justify-self-end">
-              <Text className="pt-2 text-sm opacity-80">Objavljeno: {date}</Text>
+              <p className="pt-2 text-sm opacity-80">Objavljeno: {date}</p>
             </span>
           </div>
         </div>
@@ -80,7 +75,7 @@ Card.propTypes = {
   date: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  tag: TagShape.isRequired,
+  tag: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(Object.values(CARD_VARIANTS)),
 };

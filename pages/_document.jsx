@@ -1,11 +1,8 @@
 import { CssBaseline } from '@nextui-org/react';
 import Document, {
-  Head,
-  Html,
-  Main,
-  NextScript,
+  Head, Html, Main, NextScript,
 } from 'next/document';
-import { Meta } from '../components/Layout/Meta';
+import { Meta } from '../modules/Layout/Meta';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {

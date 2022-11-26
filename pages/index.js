@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { mapMorePosts } from '../common/postUtils';
+import { getAllPosts } from '../lib/api';
 import {
   Container,
   FeaturedSection,
@@ -8,8 +9,9 @@ import {
   Layout,
   MorePosts,
   Nav,
-} from '../components';
-import { getAllPosts } from '../lib/api';
+  ReadMoreButtonRow,
+  SectionTitle,
+} from '../modules';
 
 export default function Home({ allPosts }) {
   const heroPost = allPosts[0];
@@ -20,8 +22,15 @@ export default function Home({ allPosts }) {
       <Container>
         <Nav />
         <Intro />
+        <SectionTitle>🌟 Nova objava</SectionTitle>
         {heroPost && <HeroPost post={heroPost} />}
-        {morePosts.length > 0 && <MorePosts posts={morePosts} />}
+        {morePosts.length > 0 && (
+          <div className="mt-20 mb-10">
+            <SectionTitle>📚 Ostale objave</SectionTitle>
+            <MorePosts posts={morePosts} />
+          </div>
+        )}
+        <ReadMoreButtonRow />
         <FeaturedSection />
       </Container>
     </Layout>

@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { Card } from '../Card';
-import { SectionTitle } from '../Text';
-import { ReadMoreButtonRow } from './ReadMoreButtonRow';
 
 const STYLES = {
   LARGE_POST: { div: 'col-span-full sm:col-span-2', card: 'large' },
@@ -38,21 +36,13 @@ PostRow.propTypes = {
   posts: PropTypes.array.isRequired,
 };
 
-export function MorePosts({
-  posts,
-}) {
+export function MorePosts({ posts }) {
   return (
-    <>
-      <div className="mt-20 mb-10">
-        <SectionTitle>📚 Ostale objave</SectionTitle>
-        <div className="row-auto grid auto-rows-max grid-cols-3 gap-7">
-          {posts.map((postDuo, index) => (
-            <PostRow key={postDuo[0].slug} index={index} posts={postDuo} />
-          ))}
-        </div>
-      </div>
-      <ReadMoreButtonRow />
-    </>
+    <div className="row-auto grid auto-rows-max grid-cols-3 gap-7">
+      {posts.map((postDuo, index) => (
+        <PostRow key={postDuo[0].slug} index={index} posts={postDuo} />
+      ))}
+    </div>
   );
 }
 

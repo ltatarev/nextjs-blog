@@ -3,11 +3,11 @@ import ErrorPage from 'next/error';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import {
-  Container, Header, Layout, PostBody, PostHeader,
-} from '../../components';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 import markdownToHtml from '../../lib/markdownToHtml';
+import {
+  Container, Header, Layout, PostBody, PostHeader,
+} from '../../modules';
 
 export default function Post({ post }) {
   const router = useRouter();

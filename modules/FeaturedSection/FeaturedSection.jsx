@@ -10,9 +10,7 @@ export function FeaturedSection() {
           <Image
             className="relative
             -top-52
-            -left-28
-            hover:-translate-y-0.5
-            hover:duration-100"
+            -left-28"
             height={200}
             src="/assets/featured/Reading.png"
             width={160}
@@ -28,9 +26,7 @@ export function FeaturedSection() {
           <Image
             className="relative
             -top-28
-            -right-20
-            hover:-translate-y-0.5
-            hover:duration-100"
+            -right-20"
             height={220}
             src="/assets/featured/Main.png"
             width={180}
@@ -45,9 +41,7 @@ export function FeaturedSection() {
           <Image
             className="relative
             -top-32
-            -right-24
-            hover:-translate-y-0.5
-            hover:duration-100"
+            -right-24"
             height={200}
             src="/assets/featured/Watching.png"
             width={150}
@@ -62,9 +56,7 @@ export function FeaturedSection() {
           <Image
             className="relative
             -top-32
-            -right-24
-            hover:-translate-y-0.5
-            hover:duration-100"
+            -right-24"
             height={200}
             src="/assets/featured/Play.png"
             width={150}

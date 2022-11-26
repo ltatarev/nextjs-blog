@@ -5,7 +5,7 @@ import {
   Text,
 } from '@nextui-org/react';
 import PropTypes from 'prop-types';
-import { Tag, TagShape } from '../Tag';
+import { Tag } from '../Tag';
 
 export function PreviewCard({
   title,
@@ -50,6 +50,6 @@ export function PreviewCard({
 PreviewCard.propTypes = {
   coverImage: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  tag: TagShape.isRequired,
+  tag: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
