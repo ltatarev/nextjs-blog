@@ -1,11 +1,13 @@
 import { Container } from '../Container';
+import { Instagram } from '../Icons';
 
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
       <Container>
         <div className="flex flex-col items-center py-10 lg:flex-row">
-          <h3 className="
+          <h3
+            className="
             mb-10
             text-center
             font-bold
@@ -24,7 +26,7 @@ export function Footer() {
               className="mx-3 font-bold hover:underline"
               href="https://www.instagram.com/knjigarica"
             >
-              Instagram
+              <Instagram />
             </a>
           </div>
         </div>
