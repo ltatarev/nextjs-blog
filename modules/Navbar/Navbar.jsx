@@ -20,7 +20,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/blog',
+    route: 'blog',
     title: 'Blog',
     classes: {
       BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
@@ -33,7 +33,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/about',
+    route: 'about',
     title: 'O meni',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
@@ -46,7 +46,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/contact',
+    route: 'contact',
     title: 'Kontakt',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
@@ -64,10 +64,7 @@ export function Nav() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className={`mt-8 w-full ${
-      navbar ? 'h-screen bg-neutral-100' : ''
-    }`}
-    >
+    <nav className={`mt-8 w-full ${navbar ? 'h-screen bg-neutral-100' : ''}`}>
       <div className="mx-auto justify-between md:flex md:items-center lg:max-w-7xl">
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
@@ -91,7 +88,8 @@ export function Nav() {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className="mt-2
+            <ul
+              className="mt-2
               items-center
               justify-center
               space-y-8

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -7,7 +7,13 @@ import PropTypes from 'prop-types';
 export function NavLink({ link }) {
   const router = useRouter();
 
-  const isActive = link.route.replace('/', '') === router.route.replace('/', '');
+  const isActive = useMemo(() => {
+    if (link.route === '/') {
+      return router.route === '/' && link.route === '/';
+    }
+
+    return router.route.match(link.route);
+  }, [link, router]);
 
   const BASE_CLASSES = `mx-3 
     my-5 p-3 
