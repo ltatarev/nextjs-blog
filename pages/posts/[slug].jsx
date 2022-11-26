@@ -1,12 +1,11 @@
 import { Loading } from '@nextui-org/react';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 import markdownToHtml from '../../lib/markdownToHtml';
 import {
-  Container, Header, Layout, PostBody, PostHeader,
+  Container, Layout, Nav, PostBody, PostCard, PostHeader,
 } from '../../modules';
 
 export default function Post({ post }) {
@@ -19,21 +18,13 @@ export default function Post({ post }) {
   return (
     <Layout>
       <Container>
-        <Header />
+        <Nav />
         {router.isFallback ? (
           <Loading />
         ) : (
           <article className="mb-32">
-            <Head>
-              <title>{post.title}</title>
-              <meta content={post.ogImage.url} property="og:image" />
-            </Head>
-            <PostHeader
-              author={post.author}
-              coverImage={post.coverImage}
-              date={post.date}
-              title={post.title}
-            />
+            <PostHeader subtitle={post.subtitle} title={post.title} />
+            <PostCard post={post} />
             <PostBody content={post.content} />
           </article>
         )}
@@ -54,6 +45,7 @@ export async function getStaticProps({ params }) {
     'author',
     'content',
     'ogImage',
+    'subtitle',
     'coverImage',
   ]);
   const content = await markdownToHtml(post.content || '');

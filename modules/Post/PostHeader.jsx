@@ -1,27 +1,15 @@
 import PropTypes from 'prop-types';
-import { CoverImage } from './CoverImage';
-import { Title } from './Title';
 
-export function PostHeader({
-  title, coverImage, date,
-}) {
+export function PostHeader({ title, subtitle }) {
   return (
-    <>
-      <Title>{title}</Title>
-      <div className="mb-8 sm:mx-0 md:mb-16">
-        <CoverImage src={coverImage} title={title} />
-      </div>
-      <div className="mx-auto max-w-2xl">
-        <div className="mb-6 text-lg">
-          <p>{date}</p>
-        </div>
-      </div>
-    </>
+    <div className="my-10  place-content-center py-5 text-center align-text-bottom">
+      <p className="inline text-4xl font-extrabold">{title}</p>
+      <p className="ml-2 inline align-bottom text-3xl italic">- {subtitle}</p>
+    </div>
   );
 }
 
 PostHeader.propTypes = {
-  coverImage: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
