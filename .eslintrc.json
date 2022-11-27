@@ -17,6 +17,6 @@
     "react/react-in-jsx-scope": "off",
     "global-require": "off",
     "linebreak-style": "off",
-    "max-len": ["error", { "code": 100, "tabWidth": 4 }]
+    "max-len": ["error", { "code": 200, "tabWidth": 4 }]
   }
 }

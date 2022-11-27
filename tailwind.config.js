@@ -14,6 +14,7 @@ module.exports = {
       },
       boxShadow: {
         button: '0 4px 14px 0px',
+        filter: '0 2px 10px 0px',
       },
     },
   },

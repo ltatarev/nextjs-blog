@@ -20,7 +20,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/blog',
+    route: 'blog',
     title: 'Blog',
     classes: {
       BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
@@ -33,7 +33,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/about',
+    route: 'about',
     title: 'O meni',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
@@ -46,7 +46,7 @@ const ROUTES = [
     },
   },
   {
-    route: '/contact',
+    route: 'contact',
     title: 'Kontakt',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
@@ -72,22 +72,14 @@ export function Nav() {
               <Image height={70} src="/assets/logo.png" width={70} />
             </Link>
             <div className="md:hidden">
-              <button
-                className="rounded-md p-2 text-gray-700 outline-none"
-                type="button"
-                onClick={() => setNavbar(!navbar)}
-              >
+              <button className="rounded-md p-2 text-gray-700 outline-none" type="button" onClick={() => setNavbar(!navbar)}>
                 {navbar ? <Menu /> : <Close />}
               </button>
             </div>
           </div>
         </div>
         <div>
-          <div
-            className={`flex justify-self-center pb-3 md:mt-0 md:block md:pb-0 ${
-              navbar ? 'block' : 'hidden'
-            }`}
-          >
+          <div className={`flex justify-self-center pb-3 md:mt-0 md:block md:pb-0 ${navbar ? 'block' : 'hidden'}`}>
             <ul
               className="mt-2
               items-center
