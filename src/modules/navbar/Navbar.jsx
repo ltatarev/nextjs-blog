@@ -20,7 +20,7 @@ const ROUTES = [
     },
   },
   {
-    route: 'blog',
+    route: '/blog',
     title: 'Blog',
     classes: {
       BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
@@ -33,7 +33,7 @@ const ROUTES = [
     },
   },
   {
-    route: 'about',
+    route: '/about',
     title: 'O meni',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
@@ -46,7 +46,7 @@ const ROUTES = [
     },
   },
   {
-    route: 'contact',
+    route: '/contact',
     title: 'Kontakt',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',

@@ -4,15 +4,8 @@ import { Card } from '../card';
 
 export function HeroPost({ post }) {
   return (
-    <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-      <Card
-        coverImage={post.coverImage}
-        date={post.date}
-        excerpt={post.excerpt}
-        subtitle={post.subtitle}
-        tag={post.tag}
-        title={post.title}
-      />
+    <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
+      <Card coverImage={post.coverImage} date={post.date} excerpt={post.excerpt} subtitle={post.subtitle} tag={post.tag} title={post.title} />
     </Link>
   );
 }

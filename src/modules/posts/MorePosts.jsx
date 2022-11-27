@@ -16,13 +16,13 @@ function PostRow({ posts, index }) {
   return (
     <>
       <div className={firstPostClassNames.div}>
-        <Link as={`/posts/${posts[0].slug}`} href="/posts/[slug]">
+        <Link as={`/blog/${posts[0].slug}`} href="/blog/[slug]">
           <Card variant={firstPostClassNames.card} {...posts[0]} />
         </Link>
       </div>
       {posts.length > 1 && (
         <div className={secondPostClassNames.div}>
-          <Link as={`/posts/${posts[1].slug}`} href="/posts/[slug]">
+          <Link as={`/blog/${posts[1].slug}`} href="/blog/[slug]">
             <Card variant={secondPostClassNames.card} {...posts[1]} />
           </Link>
         </div>

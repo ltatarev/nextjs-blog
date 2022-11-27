@@ -21,7 +21,7 @@ export function NavLink({ link }) {
   const classNames = cn(BASE_CLASSES, link.classes.BASE, { [link.classes.ACTIVE]: isActive });
 
   return (
-    <Link key={link.route} className={classNames} href={link.route}>
+    <Link replace className={classNames} href={link.route}>
       <p className="inline text-lg font-bold">{link.title}</p>
     </Link>
   );

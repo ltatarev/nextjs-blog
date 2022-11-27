@@ -8,7 +8,7 @@ export function CoverImage({ title, src, slug }) {
     <Image
       alt={`Cover Image for ${title}`}
       className={cn('w-4/12', {
-        'hover:shadow-lg transition-shadow duration-200': slug,
+        'transition-shadow duration-200 hover:shadow-lg': slug,
       })}
       height={300}
       src={src}
@@ -19,7 +19,7 @@ export function CoverImage({ title, src, slug }) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link aria-label={title} as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link aria-label={title} as={`/blog/${slug}`} href="/blog/[slug]">
           {image}
         </Link>
       ) : (
