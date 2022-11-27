@@ -4,6 +4,14 @@
     "plugin:@next/next/recommended",
     "plugin:tailwindcss/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "jsconfig": {
+        "config": "jsconfig.json",
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
   "plugins": ["tailwindcss"],
   "rules": {
     "react/react-in-jsx-scope": "off",

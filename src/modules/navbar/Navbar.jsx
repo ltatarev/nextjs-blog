@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Close, Menu } from '../Icons';
+import { Close, Menu } from '../icons';
 import { NavButtons } from './NavButtons';
 import { NavLink } from './NavLink';
 
@@ -64,10 +64,7 @@ export function Nav() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className={`mt-8 w-full ${
-      navbar ? 'h-screen bg-neutral-100' : ''
-    }`}
-    >
+    <nav className={`mt-8 w-full ${navbar ? 'h-screen bg-neutral-100' : ''}`}>
       <div className="mx-auto justify-between md:flex md:items-center lg:max-w-7xl">
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
@@ -91,7 +88,8 @@ export function Nav() {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className="mt-2
+            <ul
+              className="mt-2
               items-center
               justify-center
               space-y-8

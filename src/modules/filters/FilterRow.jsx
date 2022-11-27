@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Tag } from '../Tag/Tag';
+import { Tag } from '../tag';
 
 export function FilterRow({ titles }) {
   return (

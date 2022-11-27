@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { Card } from '../Card';
+import { Card } from '../card';
 
 const STYLES = {
   LARGE_POST: { div: 'col-span-full sm:col-span-2', card: 'large' },

@@ -2,11 +2,10 @@ import { Loading } from '@nextui-org/react';
 import ErrorPage from 'next/error';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import { getAllPosts, getPostBySlug } from '../../lib/api';
-import markdownToHtml from '../../lib/markdownToHtml';
+import { getAllPosts, getPostBySlug, markdownToHtml } from '@/lib';
 import {
   Container, Layout, Nav, PostBody, PostCard, PostHeader,
-} from '../../modules';
+} from '@/src/modules';
 
 export default function Post({ post }) {
   const router = useRouter();

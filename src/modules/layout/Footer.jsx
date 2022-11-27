@@ -1,5 +1,5 @@
-import { Container } from '../Container';
-import { Instagram } from '../Icons';
+import { Container } from '../container';
+import { Instagram } from '../icons';
 
 export function Footer() {
   return (

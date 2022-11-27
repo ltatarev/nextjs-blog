@@ -1,6 +1,6 @@
 import { Button, Row } from '@nextui-org/react';
 import Link from 'next/link';
-import { RightArrow } from '../Icons';
+import { RightArrow } from '../icons';
 
 export function ReadMoreButtonRow() {
   return (

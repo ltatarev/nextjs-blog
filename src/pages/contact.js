@@ -1,6 +1,4 @@
-import {
-  Container, Layout, Nav,
-} from '../modules';
+import { Container, Layout, Nav } from '@/src/modules';
 
 export default function Contact() {
   return (

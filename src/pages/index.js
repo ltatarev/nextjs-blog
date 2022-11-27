@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { getAllPosts } from '../../lib/api';
-import { mapMorePosts } from '../common/postUtils';
+import { getAllPosts } from '@/lib/api';
+import { mapMorePosts } from '@/src/common';
 import {
   Container,
   FeaturedSection,
@@ -11,7 +11,7 @@ import {
   Nav,
   ReadMoreButtonRow,
   SectionTitle,
-} from '../modules';
+} from '@/src/modules';
 
 export default function Home({ allPosts }) {
   const heroPost = allPosts[0];

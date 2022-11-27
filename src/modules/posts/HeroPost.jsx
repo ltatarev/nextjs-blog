@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { Card } from '../Card';
+import { Card } from '../card';
 
 export function HeroPost({ post }) {
   return (

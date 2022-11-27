@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { Tag } from '../Tag';
+import { Tag } from '../tag';
 import { PreviewCard } from './PreviewCard';
 
 const SUMMARY_LENGTH = 800;

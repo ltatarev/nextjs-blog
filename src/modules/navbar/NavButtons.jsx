@@ -1,6 +1,6 @@
 import React from 'react';
-import { socials } from '../../common/meta';
-import { Instagram, Mail } from '../Icons';
+import { Instagram, Mail } from '../icons';
+import { socials } from '@/src/common';
 
 export function NavButtons() {
   return (
