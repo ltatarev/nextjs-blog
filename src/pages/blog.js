@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
+import { getAllPosts } from '../../lib/api';
 import { mapMorePosts } from '../common/postUtils';
-import { getAllPosts } from '../lib/api';
 import {
-  Container, HeroPost, Layout, MorePosts, Nav,
+  Container, FilterRow, HeroPost, Layout, MorePosts, Nav,
 } from '../modules';
-import { FilterRow } from '../modules/Filters';
 
 export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];

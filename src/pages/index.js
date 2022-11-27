@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
+import { getAllPosts } from '../../lib/api';
 import { mapMorePosts } from '../common/postUtils';
-import { getAllPosts } from '../lib/api';
 import {
   Container,
   FeaturedSection,
