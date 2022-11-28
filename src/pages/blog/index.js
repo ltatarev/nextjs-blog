@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { getAllPosts } from '@/lib/api';
 import { mapMorePosts } from '@/src/common';
 import {
-  Container, FilterRow, HeroPost, Layout, MorePosts, Nav,
+  Container, HeroPost, Layout, MorePosts, Nav, TagsRow,
 } from '@/src/modules';
 
 export default function Blog({ allPosts }) {
@@ -14,12 +14,10 @@ export default function Blog({ allPosts }) {
       <Container>
         <Nav />
         <div className="my-16">
-          <h1 className="text-center text-xl font-bold leading-tight tracking-tighter md:text-8xl">
-            Blog.
-          </h1>
+          <h1 className="text-center text-xl font-bold leading-tight tracking-tighter md:text-8xl">Blog.</h1>
           <div className="mt-20">
             {heroPost && <HeroPost post={heroPost} />}
-            <FilterRow titles={['Recenzije', 'Preporuke', 'New in', 'Wrap up']} />
+            <TagsRow />
             {morePosts.length > 0 && <MorePosts posts={morePosts} />}
           </div>
         </div>
@@ -31,15 +29,7 @@ export default function Blog({ allPosts }) {
 Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'subtitle',
-    'tag',
-    'date',
-    'slug',
-    'coverImage',
-    'excerpt',
-  ]);
+  const allPosts = getAllPosts(['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt']);
 
   return {
     props: { allPosts },

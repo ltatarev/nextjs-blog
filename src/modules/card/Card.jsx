@@ -56,7 +56,7 @@ export function Card(props) {
             <p className="pt-2 font-serif italic">{subtitle}</p>
             <p className="py-3">{summary}</p>
           </div>
-          <div className="m-2 grid grid-cols-2">
+          <div className="my-2 grid grid-cols-2">
             <span className="justify-self-start">
               <Tag outline title={tag} />
             </span>

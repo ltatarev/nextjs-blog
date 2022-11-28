@@ -10,7 +10,10 @@ module.exports = {
       },
       colors: {
         'accent-1': '#ca718d',
-        success: '#0070f3',
+        'tag-1': '#AF5AB0',
+        'tag-2': '#5780C2',
+        'tag-3': '#A8C96C',
+        'tag-4': '#DE5A90',
       },
       boxShadow: {
         button: '0 4px 14px 0px',
