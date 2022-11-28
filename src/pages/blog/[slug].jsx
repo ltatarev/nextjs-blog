@@ -21,10 +21,12 @@ export default function Post({ post }) {
         {router.isFallback ? (
           <Loading />
         ) : (
-          <article className="mb-32">
-            <PostHeader subtitle={post.subtitle} tag={post.tag} title={post.title} />
-            <PostCard post={post} />
-            <PostBody content={post.content} />
+          <article className="mb-32 flex flex-col">
+            <div className="max-w-6xl self-center">
+              <PostHeader date={post.date} subtitle={post.subtitle} tag={post.tag} title={post.title} />
+              <PostCard post={post} />
+              <PostBody content={post.content} />
+            </div>
           </article>
         )}
       </Container>
@@ -37,7 +39,7 @@ Post.propTypes = {
 };
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'excerptTitle', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
   const content = await markdownToHtml(post.content || '');
 
   return {
