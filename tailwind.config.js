@@ -14,10 +14,12 @@ module.exports = {
         'tag-2': '#5780C2',
         'tag-3': '#A8C96C',
         'tag-4': '#DE5A90',
+        'tag-5': '#D1EAA3',
+        brown: '#D2C1C2',
       },
       boxShadow: {
         button: '0 4px 14px 0px',
-        filter: '0 2px 10px 0px',
+        filter: '0 2px 8px 0px',
       },
     },
   },
