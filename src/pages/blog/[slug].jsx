@@ -39,7 +39,7 @@ Post.propTypes = {
 };
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'excerptTitle', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
+  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'genres', 'rating', 'externalLink', 'excerptTitle', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
   const content = await markdownToHtml(post.content || '');
 
   return {
