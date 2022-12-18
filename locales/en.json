@@ -1,0 +1,35 @@
+{
+  "Home": {
+    "newPost": "🌟 New post",
+    "olderPosts": "📚 Older posts"
+  },
+  "Intro": {
+    "title": "Knjigarica.",
+    "subtitle": "blog about books, games, pop culture"
+  },
+  "Nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "FeaturedSection": {
+    "book": "Book of the month",
+    "bookLabel": "YA Fantasy",
+    "currentRead": "Curent read",
+    "currentReadLabel": "50%",
+    "tv": "TV recommendation",
+    "tvLabel": "Limited series",
+    "game": "Currently playing",
+    "gameLabel": "MOBA"
+  },
+  "ReadMore": {
+    "title": "Read more on the blog"
+  },
+  "Tags": {
+    "review": "Review",
+    "newIn": "New in",
+    "recommendation": "Recommendation",
+    "wrapUp": "Wrap up"
+  }
+}

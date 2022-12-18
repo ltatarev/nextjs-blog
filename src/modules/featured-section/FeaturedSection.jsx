@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { FeaturedCard } from './FeaturedCard';
 
 export function FeaturedSection() {
+  const t = useTranslations('FeaturedSection');
+
   return (
     <div className="flex w-full flex-row flex-wrap justify-center">
       <FeaturedCard
@@ -17,8 +20,8 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/BookOfMonth.jpg"
-        label="Studeni"
-        title="Knjiga mjeseca"
+        label={t('bookLabel')}
+        title={t('book')}
       />
       <FeaturedCard
         main
@@ -33,8 +36,8 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/CurrentRead.png"
-        label="Studeni"
-        title="Trenutno čitam"
+        label={t('currentReadLabel')}
+        title={t('currentRead')}
       />
       <FeaturedCard
         AccentImage={(
@@ -48,8 +51,8 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/TV.png"
-        label="Serija"
-        title="TV preporuka"
+        label={t('tvLabel')}
+        title={t('tv')}
       />
       <FeaturedCard
         AccentImage={(
@@ -63,8 +66,8 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/TV.png"
-        label="MOBA"
-        title="Trenutno igram"
+        label={t('gameLabel')}
+        title={t('game')}
       />
     </div>
   );

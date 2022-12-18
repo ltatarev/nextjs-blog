@@ -1,5 +1,6 @@
 // eslint-disable-next-line camelcase
 import { DM_Sans } from '@next/font/google';
+import { NextIntlProvider } from 'next-intl';
 import PropTypes from 'prop-types';
 import '../styles/globals.css';
 
@@ -13,7 +14,9 @@ const dmSans = DM_Sans({
 export default function MyApp({ Component, pageProps }) {
   return (
     <main className={`${dmSans.variable} font-sans`}>
-      <Component {...pageProps} />
+      <NextIntlProvider messages={pageProps.messages}>
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </main>
   );
 }
