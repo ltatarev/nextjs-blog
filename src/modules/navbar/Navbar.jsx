@@ -65,7 +65,7 @@ export function Nav() {
 
   return (
     <nav className={`mt-8 w-full ${navbar ? 'h-screen bg-neutral-100' : ''}`}>
-      <div className="flex place-content-center justify-between md:items-center">
+      <div className="mx-auto justify-between md:flex md:items-center">
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
             <Link href="/">
@@ -97,7 +97,7 @@ export function Nav() {
             </ul>
           </div>
         </div>
-        <div className={`hidden lg:block ${navbar ? 'hidden' : ''}`}>
+        <div className={`md:block ${navbar ? 'block p-4' : 'hidden'}`}>
           <NavButtons />
         </div>
       </div>
