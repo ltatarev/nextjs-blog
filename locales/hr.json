@@ -1,0 +1,35 @@
+{
+  "Home": {
+    "newPost": "🌟 Nova objava",
+    "olderPosts": "📚 Ostale objave"
+  },
+  "Intro": {
+    "title": "Knjigarica.",
+    "subtitle": "blog o knjigama, igricama, pop kulturi"
+  },
+  "Nav": {
+    "home": "Početna",
+    "blog": "Blog",
+    "about": "O meni",
+    "contact": "Kontakt"
+  },
+  "FeaturedSection": {
+    "book": "Knjiga mjeseca",
+    "bookLabel": "YA Fantasy",
+    "currentRead": "Trenutno čitam",
+    "currentReadLabel": "50%",
+    "tv": "TV preporuka",
+    "tvLabel": "Limitirana serija",
+    "game": "Trenutno igram",
+    "gameLabel": "MOBA"
+  },
+  "ReadMore": {
+    "title": "Pročitaj više na blogu"
+  },
+  "Tags": {
+    "review": "Recenzija",
+    "newIn": "New in",
+    "recommendation": "Preporuka",
+    "wrapUp": "Wrap up"
+  }
+}

@@ -38,7 +38,18 @@ Post.propTypes = {
   post: PropTypes.object.isRequired,
 };
 
-export async function getStaticProps({ params }) {
+export async function getStaticPaths() {
+  const allPosts = getAllPosts(['slug', 'locale']);
+
+  const paths = allPosts.map((post) => ({
+    locale: post.locale,
+    params: { slug: post.slug },
+  }));
+
+  return { paths, fallback: 'blocking' };
+}
+
+export async function getStaticProps({ params, locale }) {
   const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'genres', 'rating', 'externalLink', 'excerptTitle', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
   const content = await markdownToHtml(post.content || '');
 
@@ -48,19 +59,8 @@ export async function getStaticProps({ params }) {
         ...post,
         content,
       },
+      // eslint-disable-next-line import/no-dynamic-require
+      messages: require(`../../../locales/${locale}.json`),
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
-
-  return {
-    paths: posts.map((post) => ({
-      params: {
-        slug: post.slug,
-      },
-    })),
-    fallback: false,
   };
 }

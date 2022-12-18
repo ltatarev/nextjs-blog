@@ -28,10 +28,13 @@ export default function Blog({ allPosts }) {
 
 Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt']);
+export const getStaticProps = async ({ locale }) => {
+  const allPosts = getAllPosts(['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt', 'locale']);
+
+  const localizedPosts = allPosts.filter(({ locale: postLocale }) => postLocale === locale);
 
   return {
-    props: { allPosts },
+    // eslint-disable-next-line import/no-dynamic-require
+    props: { allPosts: localizedPosts, messages: require(`../../../locales/${locale}.json`) },
   };
 };

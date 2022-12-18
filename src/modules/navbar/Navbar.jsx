@@ -8,7 +8,7 @@ import { NavLink } from './NavLink';
 const ROUTES = [
   {
     route: '/',
-    title: 'Početna',
+    title: 'home',
     classes: {
       BASE: 'hover:border-purple-500/0 hover:bg-purple-500/20',
       ACTIVE: `bg-purple-500/0 
@@ -21,7 +21,7 @@ const ROUTES = [
   },
   {
     route: '/blog',
-    title: 'Blog',
+    title: 'blog',
     classes: {
       BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
       ACTIVE: `bg-blue-500/0 
@@ -34,7 +34,7 @@ const ROUTES = [
   },
   {
     route: '/about',
-    title: 'O meni',
+    title: 'about',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
       ACTIVE: `bg-rose-500/0
@@ -47,7 +47,7 @@ const ROUTES = [
   },
   /*  {
     route: '/contact',
-    title: 'Kontakt',
+    title: 'contact',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
       ACTIVE: `bg-green-500/0
@@ -65,7 +65,7 @@ export function Nav() {
 
   return (
     <nav className={`mt-8 w-full ${navbar ? 'h-screen bg-neutral-100' : ''}`}>
-      <div className="mx-auto justify-between md:flex md:items-center lg:max-w-7xl">
+      <div className="flex place-content-center justify-between md:items-center">
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
             <Link href="/">
