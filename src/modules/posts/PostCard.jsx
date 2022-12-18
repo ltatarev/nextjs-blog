@@ -39,7 +39,7 @@ export function PostCard({ post }) {
             <div className="my-2 text-lg font-bold">OCJENA: {times(rating, () => '⭐️')}</div>
             {post.externalLink && (
               <a href={post.externalLink}>
-                <div className="bg-brown flex h-10 w-10 justify-center rounded-full pt-1">
+                <div className="flex h-10 w-10 justify-center rounded-full pt-1">
                   <Goodreads />
                 </div>
               </a>

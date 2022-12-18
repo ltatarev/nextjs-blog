@@ -32,6 +32,7 @@ export function Meta() {
       <meta content="#ca718d" name="theme-color" />
       <link href="/feed.xml" rel="alternate" type="application/rss+xml" />
       <meta content="/assets/hero.png" property="og:image" />
+      <title>Knjigarica</title>
     </>
   );
 }

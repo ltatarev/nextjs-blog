@@ -37,27 +37,27 @@ const ROUTES = [
     title: 'O meni',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
-      ACTIVE: `bg-rose-500/0 
-      border-rose-300 
-      shadow-button 
-      shadow-rose-500 
-      hover:bg-rose-500/40 
+      ACTIVE: `bg-rose-500/0
+      border-rose-300
+      shadow-button
+      shadow-rose-500
+      hover:bg-rose-500/40
       hover:border-rose-500`,
     },
   },
-  {
+  /*  {
     route: '/contact',
     title: 'Kontakt',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
-      ACTIVE: `bg-green-500/0 
-      border-green-300 
-      shadow-button 
-      shadow-green-500 
-      hover:bg-green-500/40 
+      ACTIVE: `bg-green-500/0
+      border-green-300
+      shadow-button
+      shadow-green-500
+      hover:bg-green-500/40
       hover:border-green-500`,
     },
-  },
+  }, */
 ];
 
 export function Nav() {
