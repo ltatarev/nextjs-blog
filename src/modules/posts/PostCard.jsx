@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { Goodreads } from '../icons';
 import { GenreTags } from './GenreTags';
@@ -6,7 +7,9 @@ import { GenreTags } from './GenreTags';
 const times = (n, func = (i) => i) => Array.from({ length: n }).map((_, i) => func(i));
 
 export function PostCard({ post }) {
-  const title = post.excerptTitle ? post.excerptTitle : 'Kratki sadržaj';
+  const t = useTranslations('PostCard');
+
+  const title = post.excerptTitle;
   const rating = post.rating ? parseInt(post.rating, 10) : 5;
   const genres = post.genres.split(',');
 
@@ -36,7 +39,9 @@ export function PostCard({ post }) {
             ))}
           </div>
           <div className="flex flex-row place-content-between">
-            <div className="my-2 text-lg font-bold">OCJENA: {times(rating, () => '⭐️')}</div>
+            <div className="my-2 text-lg font-bold">
+              {t('rating').toUpperCase()} {times(rating, () => '⭐️')}
+            </div>
             {post.externalLink && (
               <a href={post.externalLink}>
                 <div className="flex h-10 w-10 justify-center rounded-full pt-1">

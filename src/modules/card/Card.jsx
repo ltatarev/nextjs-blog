@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { Tag } from '../tag';
 import { PreviewCard } from './PreviewCard';
@@ -15,6 +16,8 @@ export function Card(props) {
   const {
     title, subtitle, excerpt, coverImage, tag, date, variant,
   } = props;
+
+  const t = useTranslations('Card');
 
   const summary = useMemo(() => {
     if (excerpt.length > SUMMARY_LENGTH) {
@@ -61,7 +64,9 @@ export function Card(props) {
               <Tag outline title={tag} />
             </span>
             <span className="justify-self-end">
-              <p className="pt-2 text-sm opacity-80">Objavljeno: {date}</p>
+              <p className="pt-2 text-sm opacity-80">
+                {t('published')}: {date}
+              </p>
             </span>
           </div>
         </div>

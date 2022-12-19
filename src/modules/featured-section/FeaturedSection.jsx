@@ -35,7 +35,7 @@ export function FeaturedSection() {
             width={180}
           />
         )}
-        imgSrc="/assets/featured/CurrentRead.png"
+        imgSrc="/assets/featured/CurrentRead.jpg"
         label={t('currentReadLabel')}
         title={t('currentRead')}
       />
@@ -65,7 +65,7 @@ export function FeaturedSection() {
             width={150}
           />
         )}
-        imgSrc="/assets/featured/TV.png"
+        imgSrc="/assets/featured/Playing.jpg"
         label={t('gameLabel')}
         title={t('game')}
       />

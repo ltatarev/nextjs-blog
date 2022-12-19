@@ -17,7 +17,7 @@
     "book": "Book of the month",
     "bookLabel": "YA Fantasy",
     "currentRead": "Curent read",
-    "currentReadLabel": "50%",
+    "currentReadLabel": "YA",
     "tv": "TV recommendation",
     "tvLabel": "Limited series",
     "game": "Currently playing",
@@ -31,5 +31,14 @@
     "newIn": "New in",
     "recommendation": "Recommendation",
     "wrapUp": "Wrap up"
+  },
+  "Card": {
+    "published": "Published"
+  },
+  "PostHeader": {
+    "published": "Published"
+  },
+  "PostCard": {
+    "rating": "Rating"
   }
 }

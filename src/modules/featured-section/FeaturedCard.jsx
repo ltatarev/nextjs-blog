@@ -30,7 +30,6 @@ export function FeaturedCard({
     p-8
     mx-8
     shadow-lg
-    hover:-translate-y-px
     hover:shadow-xl
     hover:duration-100`,
   );

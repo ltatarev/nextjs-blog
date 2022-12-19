@@ -3,7 +3,7 @@ import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const BASE_CLASS = 'mx-1 px-1 rounded-xl bg-opacity-40 hover:bg-opacity-100';
+const BASE_CLASS = 'mx-1 px-1 rounded-xl bg-opacity-20 hover:bg-opacity-40';
 
 export function NavButtons() {
   const router = useRouter();
