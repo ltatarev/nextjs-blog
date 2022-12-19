@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Card as UICard } from '@nextui-org/react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
@@ -32,8 +33,9 @@ export function Card(props) {
   }
 
   return (
-    <div
-      className="
+    <UICard isHoverable isPressable>
+      <div
+        className={`
         h-full
         content-center
         rounded-xl
@@ -44,34 +46,34 @@ export function Card(props) {
         duration-200
         ease-in
         hover:-translate-y-0.5
-        hover:shadow-2xl
-        hover:duration-100"
-    >
-      <div className="grid h-full grid-cols-8 gap-4">
-        <div className="col-span-8 md:col-span-3">
-          <div className="relative h-72 w-full md:h-full">
-            <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
+        hover:duration-100`}
+      >
+        <div className="grid h-full grid-cols-8 gap-4">
+          <div className="col-span-8 md:col-span-3">
+            <div className="relative h-72 w-full md:h-full">
+              <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
+            </div>
           </div>
-        </div>
-        <div className="col-span-8 flex flex-col md:col-span-5">
-          <div className="m-2 mb-5 flex-1">
-            <h2 className="text-4xl font-bold">{title}</h2>
-            <p className="pt-2 font-serif italic">{subtitle}</p>
-            <p className="py-3">{summary}</p>
-          </div>
-          <div className="my-2 grid grid-cols-2">
-            <span className="justify-self-start">
-              <Tag outline title={tag} />
-            </span>
-            <span className="justify-self-end">
-              <p className="pt-2 text-sm opacity-80">
-                {t('published')}: {date}
-              </p>
-            </span>
+          <div className="col-span-8 flex flex-col md:col-span-5">
+            <div className="m-2 mb-5 flex-1">
+              <h2 className="text-4xl font-bold">{title}</h2>
+              <p className="pt-2 font-serif italic">{subtitle}</p>
+              <p className="py-3">{summary}</p>
+            </div>
+            <div className="my-2 grid grid-cols-2">
+              <span className="justify-self-start">
+                <Tag outline title={tag} />
+              </span>
+              <span className="justify-self-end">
+                <p className="pt-2 text-sm opacity-80">
+                  {t('published')}: {date}
+                </p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </UICard>
   );
 }
 
