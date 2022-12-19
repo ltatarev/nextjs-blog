@@ -21,11 +21,7 @@ export function Meta() {
         type="image/png"
       />
       <link href="/favicon/site.webmanifest" rel="manifest" />
-      <link
-        color="#5bbad5"
-        href="/favicon/safari-pinned-tab.svg"
-        rel="mask-icon"
-      />
+      <link color="#5780c2" href="/safari-pinned-tab.svg" rel="mask-icon" />
       <link href="/favicon/favicon.ico" rel="shortcut icon" />
       <meta content="#da532c" name="msapplication-TileColor" />
       <meta content="/favicon/browserconfig.xml" name="msapplication-config" />
