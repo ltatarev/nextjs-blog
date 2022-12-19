@@ -1,11 +1,11 @@
 ---
 id: 1
 title: 'Welcome to my blog'
-subtitle: 'Tessa Sharpe'
+subtitle: 'A short introduction'
 excerptTitle: 'Summary'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/2-cover.jpg'
-date: '16.5.2022.'
+coverImage: '/assets/blog/1-cover.jpg'
+date: '19.12.2022.'
 tag: 'wrapUp'
 externalLink: 'https://github.com/ltatarev/the-moviest'
 genres: '👾 young adult, 🎞 mystery, 🔎 thriller'

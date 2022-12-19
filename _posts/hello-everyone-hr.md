@@ -1,13 +1,11 @@
 ---
+id: 3
 title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
 subtitle: 'Tessa Sharpe'
 excerptTitle: 'Summary'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/Cover.png'
+coverImage: '/assets/blog/3-cover.jpg'
 date: '16.5.2022.'
-id: 3
-ogImage:
-  url: '/assets/blog/Cover.png'
 tag: 'review'
 externalLink: 'https://github.com/ltatarev/the-moviest'
 genres: '👾 young adult, 🎞 mystery, 🔎 thriller'

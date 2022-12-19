@@ -30,9 +30,9 @@ Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
 export const getStaticProps = async ({ locale }) => {
   const allPosts = getAllPosts(locale, ['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt', 'locale']);
-
+  console.log(allPosts.length, 'allPosts');
   const localizedPosts = allPosts.filter(({ locale: postLocale }) => postLocale === locale);
-
+  console.log(localizedPosts.length, 'localizedPosts');
   return {
     // eslint-disable-next-line import/no-dynamic-require
     props: { allPosts: localizedPosts, messages: require(`../../../locales/${locale}.json`) },
