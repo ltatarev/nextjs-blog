@@ -29,7 +29,7 @@ export default function Blog({ allPosts }) {
 Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
 export const getStaticProps = async ({ locale }) => {
-  const allPosts = getAllPosts(['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt', 'locale']);
+  const allPosts = getAllPosts(locale, ['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt', 'locale']);
 
   const localizedPosts = allPosts.filter(({ locale: postLocale }) => postLocale === locale);
 
