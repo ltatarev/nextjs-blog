@@ -1,4 +1,4 @@
-# NextJS blog
+# 📓 NextJS blog
 
 ![vercel](https://user-images.githubusercontent.com/38048916/207945361-531decad-697f-4011-8285-05dc1c8995b0.svg)
 ![Vercel](https://vercelbadge.vercel.app/api/ltatarev/nextjs-blog)
