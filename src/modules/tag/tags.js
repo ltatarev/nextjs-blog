@@ -1,4 +1,4 @@
-export const CATEGORY_NAMES = ['Recenzija', 'New in', 'Preporuka', 'Wrap up'];
+export const CATEGORY_NAMES = ['review', 'newIn', 'recommendation', 'wrapUp'];
 
 export const CATEGORIES = [
   {

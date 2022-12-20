@@ -2,10 +2,13 @@ import React from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { isRouteActive } from './routeService';
 
 export function NavLink({ link }) {
+  const t = useTranslations('Nav');
+
   const router = useRouter();
 
   const isActive = isRouteActive(link, router);
@@ -22,7 +25,7 @@ export function NavLink({ link }) {
 
   return (
     <Link replace className={classNames} href={link.route}>
-      <p className="inline text-lg font-bold">{link.title}</p>
+      <p className="inline text-lg font-bold">{t(link.title)}</p>
     </Link>
   );
 }

@@ -21,17 +21,14 @@ export function Meta() {
         type="image/png"
       />
       <link href="/favicon/site.webmanifest" rel="manifest" />
-      <link
-        color="#5bbad5"
-        href="/favicon/safari-pinned-tab.svg"
-        rel="mask-icon"
-      />
+      <link color="#5780c2" href="/safari-pinned-tab.svg" rel="mask-icon" />
       <link href="/favicon/favicon.ico" rel="shortcut icon" />
       <meta content="#da532c" name="msapplication-TileColor" />
       <meta content="/favicon/browserconfig.xml" name="msapplication-config" />
       <meta content="#ca718d" name="theme-color" />
       <link href="/feed.xml" rel="alternate" type="application/rss+xml" />
       <meta content="/assets/hero.png" property="og:image" />
+      <title>Knjigarica</title>
     </>
   );
 }

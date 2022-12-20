@@ -1,13 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { FeaturedCard } from './FeaturedCard';
 
 export function FeaturedSection() {
+  const t = useTranslations('FeaturedSection');
+
   return (
     <div className="flex w-full flex-row flex-wrap justify-center">
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-52
             -left-28"
@@ -17,13 +21,14 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/BookOfMonth.jpg"
-        label="Studeni"
-        title="Knjiga mjeseca"
+        label={t('bookLabel')}
+        title={t('book')}
       />
       <FeaturedCard
         main
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-28
             -right-20"
@@ -32,13 +37,14 @@ export function FeaturedSection() {
             width={180}
           />
         )}
-        imgSrc="/assets/featured/CurrentRead.png"
-        label="Studeni"
-        title="Trenutno čitam"
+        imgSrc="/assets/featured/CurrentRead.jpg"
+        label={t('currentReadLabel')}
+        title={t('currentRead')}
       />
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"
@@ -48,12 +54,13 @@ export function FeaturedSection() {
           />
         )}
         imgSrc="/assets/featured/TV.png"
-        label="Serija"
-        title="TV preporuka"
+        label={t('tvLabel')}
+        title={t('tv')}
       />
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"
@@ -62,9 +69,9 @@ export function FeaturedSection() {
             width={150}
           />
         )}
-        imgSrc="/assets/featured/TV.png"
-        label="MOBA"
-        title="Trenutno igram"
+        imgSrc="/assets/featured/Playing.jpg"
+        label={t('gameLabel')}
+        title={t('game')}
       />
     </div>
   );

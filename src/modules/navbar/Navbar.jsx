@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { Close, Menu } from '../icons';
 import { NavButtons } from './NavButtons';
 import { NavLink } from './NavLink';
@@ -8,7 +9,7 @@ import { NavLink } from './NavLink';
 const ROUTES = [
   {
     route: '/',
-    title: 'Početna',
+    title: 'home',
     classes: {
       BASE: 'hover:border-purple-500/0 hover:bg-purple-500/20',
       ACTIVE: `bg-purple-500/0 
@@ -21,7 +22,7 @@ const ROUTES = [
   },
   {
     route: '/blog',
-    title: 'Blog',
+    title: 'blog',
     classes: {
       BASE: 'hover:border-blue-500/0 hover:bg-blue-500/20',
       ACTIVE: `bg-blue-500/0 
@@ -34,42 +35,42 @@ const ROUTES = [
   },
   {
     route: '/about',
-    title: 'O meni',
+    title: 'about',
     classes: {
       BASE: 'hover:border-rose-500/0 hover:bg-rose-500/20',
-      ACTIVE: `bg-rose-500/0 
-      border-rose-300 
-      shadow-button 
-      shadow-rose-500 
-      hover:bg-rose-500/40 
+      ACTIVE: `bg-rose-500/0
+      border-rose-300
+      shadow-button
+      shadow-rose-500
+      hover:bg-rose-500/40
       hover:border-rose-500`,
     },
   },
-  {
+  /*  {
     route: '/contact',
-    title: 'Kontakt',
+    title: 'contact',
     classes: {
       BASE: 'hover:border-green-500/0 hover:bg-green-500/20',
-      ACTIVE: `bg-green-500/0 
-      border-green-300 
-      shadow-button 
-      shadow-green-500 
-      hover:bg-green-500/40 
+      ACTIVE: `bg-green-500/0
+      border-green-300
+      shadow-button
+      shadow-green-500
+      hover:bg-green-500/40
       hover:border-green-500`,
     },
-  },
+  }, */
 ];
 
-export function Nav() {
+export function Nav({ slug }) {
   const [navbar, setNavbar] = useState(false);
 
   return (
     <nav className={`mt-8 w-full ${navbar ? 'h-screen bg-neutral-100' : ''}`}>
-      <div className="mx-auto justify-between md:flex md:items-center lg:max-w-7xl">
+      <div className="mx-auto justify-between md:flex md:items-center">
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
             <Link href="/">
-              <Image height={70} src="/assets/logo.png" width={70} />
+              <Image height={70} priority src="/assets/logo.png" width={70} />
             </Link>
             <div className="md:hidden">
               <button className="rounded-md p-2 text-gray-700 outline-none" type="button" onClick={() => setNavbar(!navbar)}>
@@ -97,10 +98,18 @@ export function Nav() {
             </ul>
           </div>
         </div>
-        <div className={`hidden lg:block ${navbar ? 'hidden' : ''}`}>
-          <NavButtons />
+        <div className={`md:block ${navbar ? 'block p-4' : 'hidden'}`}>
+          <NavButtons slug={slug} />
         </div>
       </div>
     </nav>
   );
 }
+
+Nav.propTypes = {
+  slug: PropTypes.string,
+};
+
+Nav.defaultProps = {
+  slug: null,
+};

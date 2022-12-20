@@ -1,10 +1,13 @@
 import cn from 'classnames';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { CATEGORY_NAMES } from './tags';
 
 export function Tag({ title, outline, removeSpace }) {
-  const classNames = cn('rounded-3xl font-bold my-2 text-center text-slate-50 uppercase text-sm px-5 py-1 hover:cursor-pointer w-fit h-fit', {
-    'mr-20': !removeSpace,
+  const t = useTranslations('Tags');
+
+  const classNames = cn('rounded-3xl font-bold my-2 text-center text-slate-50 uppercase text-sm px-4 py-1 hover:cursor-pointer w-fit h-fit', {
+    'mr-2': !removeSpace,
     'bg-tag-4 text-slate-100': !outline,
     'bg-tag-1': title === CATEGORY_NAMES[0] && !outline,
     'border-2 border-tag-1 text-tag-1 hover:bg-tag-1 hover:text-slate-100 shadow-filter shadow-tag-1': title === CATEGORY_NAMES[0] && outline,
@@ -16,7 +19,7 @@ export function Tag({ title, outline, removeSpace }) {
     'border-2 border-tag-4 bg-slate-100 text-tag-4 hover:bg-tag-4 hover:text-slate-100 shadow-filter shadow-tag-4': title === CATEGORY_NAMES[3] && outline,
   });
 
-  return <div className={classNames}>{title}</div>;
+  return <div className={classNames}>{t(title)}</div>;
 }
 
 Tag.propTypes = {

@@ -1,16 +1,46 @@
 import React from 'react';
-import { Instagram, Mail } from '../icons';
-import { socials } from '@/src/common';
+import cn from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
 
-export function NavButtons() {
+const BASE_CLASS = 'mx-1 px-1 rounded-xl bg-opacity-20 hover:bg-opacity-40';
+
+export function NavButtons({ slug }) {
+  const router = useRouter();
+
+  const enClassNames = cn(BASE_CLASS, { 'bg-accent-1 hover:text-white': router.locale === 'en' }, { 'hover:bg-accent-1 hover:text-white': router.locale !== 'en' });
+  const hrClassNames = cn(BASE_CLASS, { 'bg-accent-2 hover:text-white': router.locale === 'hr' }, { 'hover:bg-accent-2 hover:text-white': router.locale !== 'hr' });
+
+  const href = { pathname: router.route, ...(!!slug && { query: { slug } }) };
+
   return (
-    <div className="flex w-1/2 justify-end">
-      <a className="mx-5" href={socials.instagram} rel="noreferrer" target="_blank">
-        <Instagram />
-      </a>
-      <a className="mx-5" href={`mailto:${socials.email}`} rel="noreferrer" target="_blank">
-        <Mail />
-      </a>
+    <div className="flex flex-row">
+      <span className="flex flex-row">
+        <Link
+          className={enClassNames}
+          href={href}
+          locale="en"
+        >
+          🇬🇧
+        </Link>
+        /
+        <Link
+          className={hrClassNames}
+          href={href}
+          locale="hr"
+        >
+          🇭🇷
+        </Link>
+      </span>
     </div>
   );
 }
+
+NavButtons.propTypes = {
+  slug: PropTypes.string,
+};
+
+NavButtons.defaultProps = {
+  slug: null,
+};

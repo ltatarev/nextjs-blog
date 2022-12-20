@@ -9,13 +9,13 @@ module.exports = {
         sans: ['var(--font-dmSans)', ...fontFamily.sans],
       },
       colors: {
-        'accent-1': '#ca718d',
+        'accent-1': '#CA718D',
+        'accent-2': '#5C22C7',
         'tag-1': '#AF5AB0',
         'tag-2': '#5780C2',
         'tag-3': '#A8C96C',
         'tag-4': '#DE5A90',
         'tag-5': '#D1EAA3',
-        brown: '#D2C1C2',
       },
       boxShadow: {
         button: '0 4px 14px 0px',

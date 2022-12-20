@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 export function CoverImage({ title, src, slug }) {
   const image = (
     <Image
+      priority
       alt={`Cover Image for ${title}`}
       className={cn('w-4/12', {
         'transition-shadow duration-200 hover:shadow-lg': slug,

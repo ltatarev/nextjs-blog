@@ -28,10 +28,11 @@ export default function Blog({ allPosts }) {
 
 Blog.propTypes = { allPosts: PropTypes.array.isRequired };
 
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt']);
+export const getStaticProps = async ({ locale }) => {
+  const allPosts = getAllPosts(locale, ['title', 'subtitle', 'tag', 'date', 'slug', 'coverImage', 'excerpt', 'locale']);
 
   return {
-    props: { allPosts },
+    // eslint-disable-next-line import/no-dynamic-require
+    props: { allPosts, messages: require(`../../../locales/${locale}.json`) },
   };
 };

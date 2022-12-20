@@ -1,5 +1,6 @@
 import { Container } from '../container';
-import { Instagram } from '../icons';
+import { Instagram, Mail } from '../icons';
+import { socials } from '@/src/common';
 
 export function Footer() {
   return (
@@ -21,12 +22,12 @@ export function Footer() {
           >
             2022.
           </h3>
-          <div className="flex flex-col justify-end lg:w-1/2 lg:flex-row lg:pl-4">
-            <a
-              className="mx-3 font-bold hover:underline"
-              href="https://www.instagram.com/knjigarica"
-            >
+          <div className="flex flex-row justify-end lg:w-1/2 lg:pl-4">
+            <a className="mx-3 font-bold hover:underline" href="https://www.instagram.com/knjigarica">
               <Instagram />
+            </a>
+            <a className="mx-5" href={`mailto:${socials.email}`} rel="noreferrer" target="_blank">
+              <Mail />
             </a>
           </div>
         </div>
