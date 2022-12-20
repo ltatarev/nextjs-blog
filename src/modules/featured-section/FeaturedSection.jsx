@@ -11,6 +11,7 @@ export function FeaturedSection() {
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-52
             -left-28"
@@ -27,6 +28,7 @@ export function FeaturedSection() {
         main
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-28
             -right-20"
@@ -42,6 +44,7 @@ export function FeaturedSection() {
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"
@@ -57,6 +60,7 @@ export function FeaturedSection() {
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"

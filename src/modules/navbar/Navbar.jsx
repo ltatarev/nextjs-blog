@@ -70,7 +70,7 @@ export function Nav({ slug }) {
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
             <Link href="/">
-              <Image height={70} src="/assets/logo.png" width={70} />
+              <Image height={70} priority src="/assets/logo.png" width={70} />
             </Link>
             <div className="md:hidden">
               <button className="rounded-md p-2 text-gray-700 outline-none" type="button" onClick={() => setNavbar(!navbar)}>

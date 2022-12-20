@@ -1,6 +1,6 @@
 ---
 id: 1
-title: 'Welcome to my blog'
+title: 'Dobrodošli na moj blog'
 subtitle: 'Kratki uvod'
 excerptTitle: 'Summary'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'

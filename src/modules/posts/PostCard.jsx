@@ -25,7 +25,7 @@ export function PostCard({ post }) {
       <div className="grid h-full grid-cols-8 gap-4">
         <div className="col-span-8 md:col-span-2">
           <div className="relative h-80 w-full">
-            <Image className="rounded-xl object-cover" layout="fill" src={post.coverImage} />
+            <Image priority className="rounded-xl object-cover" layout="fill" src={post.coverImage} />
           </div>
         </div>
         <div className="col-span-8 flex flex-col place-content-between md:col-span-6">

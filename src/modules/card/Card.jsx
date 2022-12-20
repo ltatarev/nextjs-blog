@@ -51,7 +51,7 @@ export function Card(props) {
         <div className="grid h-full grid-cols-8 gap-4">
           <div className="col-span-8 md:col-span-3">
             <div className="relative h-72 w-full md:h-full">
-              <Image className="rounded-xl object-cover" layout="fill" src={coverImage} />
+              <Image className="rounded-xl object-cover" priority layout="fill" src={coverImage} />
             </div>
           </div>
           <div className="col-span-8 flex flex-col md:col-span-5">
@@ -64,8 +64,8 @@ export function Card(props) {
               <span className="justify-self-start">
                 <Tag outline title={tag} />
               </span>
-              <span className="justify-self-end">
-                <p className="pt-2 text-sm opacity-80">
+              <span className="flex items-center justify-self-end">
+                <p className="text-sm opacity-80">
                   {t('published')}: {date}
                 </p>
               </span>

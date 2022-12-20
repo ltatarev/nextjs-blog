@@ -55,7 +55,7 @@ export function FeaturedCard({
           </p>
         )}
         <div className={imageContainerClasses}>
-          <Image className="my-2 rounded-2xl object-cover" height={100} src={imgSrc} width={150} />
+          <Image priority className="my-2 rounded-2xl object-cover" height={100} src={imgSrc} width={150} />
         </div>
       </div>
       {AccentImage}
