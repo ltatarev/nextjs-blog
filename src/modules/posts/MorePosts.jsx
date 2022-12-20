@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Card } from '../card';
 
 const STYLES = {
-  LARGE_POST: { div: 'col-span-full sm:col-span-2', card: 'large' },
-  PREVIEW_POST: { div: 'col-span-full sm:col-auto', card: 'preview' },
+  LARGE_POST: { div: 'col-span-full lg:col-span-2', card: 'large' },
+  PREVIEW_POST: { div: 'col-span-full lg:col-auto', card: 'preview' },
 };
 
 function PostRow({ posts, index }) {

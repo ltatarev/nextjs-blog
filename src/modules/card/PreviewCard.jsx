@@ -24,11 +24,11 @@ export function PreviewCard({
           from-[#2a2b2b]
           to-transparent"
       >
-        <Row className="fixed bottom-3 p-3">
-          <Col className="w-auto">
+        <Row className="fixed bottom-2 flex flex-wrap items-center justify-between p-3">
+          <Col className="w-fit">
             <Tag title={tag} />
           </Col>
-          <Col className="mr-5 text-end">
+          <Col className="mr-5 w-fit text-end">
             <Text className="text-lg font-bold uppercase text-slate-50">{date}</Text>
           </Col>
         </Row>

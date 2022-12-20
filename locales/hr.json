@@ -21,7 +21,7 @@
     "tv": "TV preporuka",
     "tvLabel": "Limitirana serija",
     "game": "Trenutno igram",
-    "gameLabel": "MOBA"
+    "gameLabel": "FPS"
   },
   "ReadMore": {
     "title": "Pročitaj više na blogu"
@@ -31,5 +31,14 @@
     "newIn": "New in",
     "recommendation": "Preporuka",
     "wrapUp": "Wrap up"
+  },
+  "Card": {
+    "published": "Objavljeno"
+  },
+  "PostHeader": {
+    "published": "Objavljeno"
+  },
+  "PostCard": {
+    "rating": "Ocjena"
   }
 }

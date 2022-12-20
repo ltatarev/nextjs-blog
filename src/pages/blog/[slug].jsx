@@ -17,7 +17,7 @@ export default function Post({ post }) {
   return (
     <Layout>
       <Container>
-        <Nav />
+        <Nav slug={post.slug} />
         {router.isFallback ? (
           <Loading />
         ) : (
@@ -38,8 +38,8 @@ Post.propTypes = {
   post: PropTypes.object.isRequired,
 };
 
-export async function getStaticPaths() {
-  const allPosts = getAllPosts(['slug', 'locale']);
+export async function getStaticPaths({ locales }) {
+  const allPosts = getAllPosts(locales[0], ['slug', 'locale']);
 
   const paths = allPosts.map((post) => ({
     locale: post.locale,
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params, locale }) {
-  const post = getPostBySlug(params.slug, ['title', 'date', 'slug', 'genres', 'rating', 'externalLink', 'excerptTitle', 'author', 'content', 'ogImage', 'excerpt', 'subtitle', 'tag', 'coverImage']);
+  const post = getPostBySlug(params.slug, locale, ['title', 'date', 'slug', 'genres', 'rating', 'externalLink', 'excerptTitle', 'author', 'content', 'excerpt', 'subtitle', 'tag', 'coverImage']);
   const content = await markdownToHtml(post.content || '');
 
   return {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { Close, Menu } from '../icons';
 import { NavButtons } from './NavButtons';
 import { NavLink } from './NavLink';
@@ -60,7 +61,7 @@ const ROUTES = [
   }, */
 ];
 
-export function Nav() {
+export function Nav({ slug }) {
   const [navbar, setNavbar] = useState(false);
 
   return (
@@ -69,7 +70,7 @@ export function Nav() {
         <div>
           <div className="flex items-center justify-between py-3 md:block md:py-5 ">
             <Link href="/">
-              <Image height={70} src="/assets/logo.png" width={70} />
+              <Image height={70} priority src="/assets/logo.png" width={70} />
             </Link>
             <div className="md:hidden">
               <button className="rounded-md p-2 text-gray-700 outline-none" type="button" onClick={() => setNavbar(!navbar)}>
@@ -98,9 +99,17 @@ export function Nav() {
           </div>
         </div>
         <div className={`md:block ${navbar ? 'block p-4' : 'hidden'}`}>
-          <NavButtons />
+          <NavButtons slug={slug} />
         </div>
       </div>
     </nav>
   );
 }
+
+Nav.propTypes = {
+  slug: PropTypes.string,
+};
+
+Nav.defaultProps = {
+  slug: null,
+};

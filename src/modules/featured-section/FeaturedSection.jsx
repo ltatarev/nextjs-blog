@@ -11,6 +11,7 @@ export function FeaturedSection() {
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-52
             -left-28"
@@ -27,6 +28,7 @@ export function FeaturedSection() {
         main
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-28
             -right-20"
@@ -35,13 +37,14 @@ export function FeaturedSection() {
             width={180}
           />
         )}
-        imgSrc="/assets/featured/CurrentRead.png"
+        imgSrc="/assets/featured/CurrentRead.jpg"
         label={t('currentReadLabel')}
         title={t('currentRead')}
       />
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"
@@ -57,6 +60,7 @@ export function FeaturedSection() {
       <FeaturedCard
         AccentImage={(
           <Image
+            priority
             className="relative
             -top-32
             -right-24"
@@ -65,7 +69,7 @@ export function FeaturedSection() {
             width={150}
           />
         )}
-        imgSrc="/assets/featured/TV.png"
+        imgSrc="/assets/featured/Playing.jpg"
         label={t('gameLabel')}
         title={t('game')}
       />
