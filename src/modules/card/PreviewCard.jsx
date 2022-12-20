@@ -8,7 +8,7 @@ export function PreviewCard({
   title, coverImage, tag, date,
 }) {
   return (
-    <Card isHoverable isPressable className="h-full min-h-max border-0 bg-transparent">
+    <Card isHoverable isPressable className="h-full min-h-max border-0 bg-transparent" variant="flat">
       <Card.Header className="fixed inset-x-3 bottom-14">
         <Text className="text-3xl font-bold text-slate-50">{title}</Text>
       </Card.Header>

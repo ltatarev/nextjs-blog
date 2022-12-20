@@ -33,7 +33,7 @@ export function Card(props) {
   }
 
   return (
-    <UICard isHoverable isPressable>
+    <UICard isHoverable isPressable variant="flat">
       <div
         className={`
         h-full
@@ -41,17 +41,15 @@ export function Card(props) {
         rounded-xl
         bg-slate-50
         p-5
-        shadow-xl
+        shadow-lg
         transition-all
         duration-200
-        ease-in
-        hover:-translate-y-0.5
-        hover:duration-100`}
+        ease-in`}
       >
         <div className="grid h-full grid-cols-8 gap-4">
           <div className="col-span-8 md:col-span-3">
             <div className="relative h-72 w-full md:h-full">
-              <Image className="rounded-xl object-cover" priority layout="fill" src={coverImage} />
+              <Image priority className="rounded-xl object-cover" layout="fill" src={coverImage} />
             </div>
           </div>
           <div className="col-span-8 flex flex-col md:col-span-5">
