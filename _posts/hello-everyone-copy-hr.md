@@ -1,13 +1,11 @@
 ---
+id: 4
 title: 'Hello everyone copy'
 subtitle: 'Tessa Sharpe'
 excerptTitle: 'Summary'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.  leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/GST.png'
+coverImage: '/assets/blog/4-cover.jpeg'
 date: '16.5.2022.'
-id: 4
-ogImage:
-  url: '/assets/blog/GST.png'
 tag: 'recommendation'
 externalLink: 'https://github.com/ltatarev/the-moviest'
 genres: '👾 young adult, 🎞 mystery, 🔎 thriller'
