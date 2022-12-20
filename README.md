@@ -6,6 +6,8 @@
 
 [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![nextjs blog](https://user-images.githubusercontent.com/38048916/208768219-3e2d1306-9c6d-4eb4-959f-09d10293f00e.png)
+
 ## Useful links
 
 - [TailwindCSS](https://tailwindcss.com/docs/aspect-ratio)
