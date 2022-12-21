@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { getAllPosts } from '@/lib/api';
 import { mapMorePosts } from '@/src/common';
@@ -6,11 +8,16 @@ import {
 } from '@/src/modules';
 
 export default function Blog({ allPosts }) {
+  const t = useTranslations('Blog');
+
   const heroPost = allPosts[0];
   const morePosts = mapMorePosts(allPosts.slice(1));
 
   return (
     <Layout>
+      <Head>
+        <title>{t('title')}</title>
+      </Head>
       <Container>
         <Nav />
         <div className="my-16">

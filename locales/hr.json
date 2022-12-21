@@ -1,7 +1,17 @@
 {
   "Home": {
     "newPost": "🌟 Nova objava",
-    "olderPosts": "📚 Ostale objave"
+    "olderPosts": "📚 Ostale objave",
+    "title": "Knjigarica"
+  },
+  "About": {
+    "title": "O meni"
+  },
+  "Blog": {
+    "title": "Blog"
+  },
+  "Post": {
+    "title": "Objava"
   },
   "Intro": {
     "title": "Knjigarica.",

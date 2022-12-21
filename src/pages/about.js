@@ -1,8 +1,15 @@
+import Head from 'next/head';
+import { useTranslations } from 'next-intl';
 import { Container, Layout, Nav } from '@/src/modules';
 
 export default function About() {
+  const t = useTranslations('About');
+
   return (
     <Layout>
+      <Head>
+        <title>{t('title')}</title>
+      </Head>
       <Container>
         <Nav />
         <div className="my-16">
