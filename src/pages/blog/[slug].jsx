@@ -1,6 +1,8 @@
 import { Loading } from '@nextui-org/react';
 import ErrorPage from 'next/error';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { getAllPosts, getPostBySlug, markdownToHtml } from '@/lib';
 import {
@@ -8,6 +10,7 @@ import {
 } from '@/src/modules';
 
 export default function Post({ post }) {
+  const t = useTranslations('Post');
   const router = useRouter();
 
   if (!router.isFallback && !post.slug) {
@@ -16,6 +19,9 @@ export default function Post({ post }) {
 
   return (
     <Layout>
+      <Head>
+        <title>{post.title || t('title')}</title>
+      </Head>
       <Container>
         <Nav slug={post.slug} />
         {router.isFallback ? (

@@ -1,7 +1,17 @@
 {
   "Home": {
     "newPost": "🌟 New post",
-    "olderPosts": "📚 Older posts"
+    "olderPosts": "📚 Older posts",
+    "title": "Knjigarica"
+  },
+  "About": {
+    "title": "About me"
+  },
+  "Blog": {
+    "title": "Blog"
+  },
+  "Post": {
+    "title": "Blog post"
   },
   "Intro": {
     "title": "Knjigarica.",

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useTranslations } from 'next-intl';
 import PropTypes from 'prop-types';
 import { getAllPosts } from '@/lib/api';
@@ -14,6 +15,9 @@ export default function Home({ allPosts }) {
 
   return (
     <Layout>
+      <Head>
+        <title>{t('title')}</title>
+      </Head>
       <Container>
         <Nav />
         <Intro />
